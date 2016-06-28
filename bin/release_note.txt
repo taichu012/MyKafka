@@ -1,0 +1,70 @@
+++++++++++++++++
+Release Notes:
+Author：taichu
+++++++++++++++++
+
+Ed0.0.1
+----------------------------
+REQ0001:实现基本的producer功能；
+REQ0002：实现producer线程化；
+REQ0003:实现了consumer；
+REQ0004：实现了demo测试，启动了1个producer和2个consumer；
+REQ0005:实现了读取INI配置文件
+REQ0006：实现了通过读取配置自动运行zookeeper和kafka，然后运行producer和consumer，观察生产和消费。
+（在eclipse关闭后会自动杀掉这2个server的进程和消费者生产者2个线程。
+    另外，zookeeper会记忆consumer的offset，不断往后滚动，这里不对offset深究）
+REQ0007:增加了consumer连续K次收不到msg就退出线程；
+REQ0008:增加了shutdown的hook钩子到exit线程，并用接口将退出前的工作封装后传给exit线程；
+REQ0009：在consumer和producer代码中支持main的调测（需外界cmd手动启动其他模块配合测试）
+
+
+
+
+
+
+
+
+++++++++++++++++
+TODOLIST: 
+++++++++++++++++
+
+1.【CLOSED】implement consumer;
+2.setup log4j(console output and log file output) 
+3.【CLOSED】setup command line start mode (as producer ONLY,consumer ONLY, both,...) 
+4.setup Control Protocol to handle producer & consumer; 
+5.setup socket data input to producer; 5.setup http/URL data input to producer(use tomcat?)
+6.jmeter发送message给producer来测试
+7.尝试用生物调控因子来动态的处理producer和consumer的数量（是否需要用到pool开源库？）
+8.放入GITHUB或oschina的开源地方
+
+
+
+
+
+
+++++++++++++++++
+Hints
+++++++++++++++++
+
+H0001 处理报错：Exception in thread "main" java.lang.NoClassDefFoundError: org/apache/log4j/Level
+                 说明： 缺少包：slf4j-api-1.5.2.jar，slf4j-log4j12-1.5.2.jar，log4j-1.2.17.jar
+                             它们 都在kafka安装目录的libs中，拷贝到工程，应用为build编译所需类库文件；
+                             然后 在class类文件开头引入包“import org.apache.log4j.*; 
+                             在 class类文件的类定义中加入“private static Logger log =Logger.getLogger("MyClass.class");”
+                             
+H0002 中文乱码问题（TODO）：
+	1.WIN7默认的cmd（命令行窗口）是GBK编码（2字节），不是utf-8（3字节）；
+	2.在cmd中可以用命令“chcp”来切换：
+		chcp 65001  就是换成UTF-8代码页
+		chcp 936 可以换回默认的GBK
+		chcp 437 是美国英语
+	3.一般来说eclipse默认页码是GBK，可在“window--preferences--general--workspace”设定为utf-8
+	4.在cmd中启动zookeeper和kafka后，再启动1个producer和1个consumer，因为都是GBK，所以消息为“中文”，都能看到；但是producer的CMD
+	  窗体输入中文后，在IDE/eclipse中的console输出的时候看到“？？？”问号；待研究TODO；
+	5.eclipse的源码source编码格式一般继承OS，比如继承WIN7的默认GBK，但可以转换显示。问题是如果java文件是GBK，txt文件是utf-8，转换为
+	 任何一种，其他就看不到了。而且转换显示，并非“实际转换文件！”，所以可以安装插件“com.lifesting.tool.encoding_1.0.0.jar”，
+	 就能在eclipse中实现转换规则设定，包括文件实际转换！
+	  
+	  
+	  
+	  
