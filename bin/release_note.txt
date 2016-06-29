@@ -3,19 +3,23 @@ Release Notes:
 Author：taichu
 ++++++++++++++++
 
-Ed0.0.1
+
+Ed0.0.1（2016-06-29）
 ----------------------------
 REQ0001:实现基本的producer功能；
 REQ0002：实现producer线程化；
-REQ0003:实现了consumer；
-REQ0004：实现了demo测试，启动了1个producer和2个consumer；
-REQ0005:实现了读取INI配置文件
-REQ0006：实现了通过读取配置自动运行zookeeper和kafka，然后运行producer和consumer，观察生产和消费。
-（在eclipse关闭后会自动杀掉这2个server的进程和消费者生产者2个线程。
-    另外，zookeeper会记忆consumer的offset，不断往后滚动，这里不对offset深究）
-REQ0007:增加了consumer连续K次收不到msg就退出线程；
-REQ0008:增加了shutdown的hook钩子到exit线程，并用接口将退出前的工作封装后传给exit线程；
-REQ0009：在consumer和producer代码中支持main的调测（需外界cmd手动启动其他模块配合测试）
+REQ0003:实现基本的consumer功能和线程化；
+REQ0004：实现demo功能，可以启动1个producer线程和1个consumer线程；
+REQ0005:实现INI配置文件的读取；
+REQ0006：实现通过运行脚本来以进程形式启动zookeeper和kafka2个服务器；
+REQ0007:增加了consumer连续K次收不到msg就退出线程的机制；
+REQ0008:增加了shutdown的hook钩子到exit处理线程，且将处理函数接口化；
+REQ0009：增加了MyKafkaDemo的控制台输入接收处理，任何输入将触发demo程序结束，并通过钩子妥善处理进程和线程善后工作；
+REQ0010：将源码放在远端git仓库维护（https://git.oschina.net/taichu/MyKafka.git）；
+REQ0011：综合前面开发内容，实现了MyKafkaDemo启动2个进程和2个现场来演示kafka平台的消息收发，并且
+实现了console输入任何内容（比如ENTER回车）就结束程序，通过钩子勾到shutdown消息，妥善关闭2个进程和2个现场，
+但2个进程是独立的2个cmd窗口，还需手动关闭（推荐在WIN7的任务管理器中对2个cmd进程“结束进程树”而不是“结束进程”，
+这样会级联的关闭cmd启动的java子进程！如果发现java子进程上未关闭，可在任务管理器中关闭它们（jconsole中可以看到java进程号）
 
 
 
@@ -35,7 +39,7 @@ TODOLIST:
 5.setup socket data input to producer; 5.setup http/URL data input to producer(use tomcat?)
 6.jmeter发送message给producer来测试
 7.尝试用生物调控因子来动态的处理producer和consumer的数量（是否需要用到pool开源库？）
-8.放入GITHUB或oschina的开源地方
+8.【CLOSED】放入GITHUB或oschina的开源地方
 
 
 

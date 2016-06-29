@@ -93,7 +93,7 @@ public class IniReader {
 	}
 
 	public static void main(String[] args) throws IOException {
-		String IniFilename = "D:\\eclipse-workspace\\KafkaTest\\src\\taichu\\kafka\\test\\MyKafkaDemo.ini";
+		String IniFilename = "D:\\RemoteSource\\git.oschina.net\\MyKafka\\src\\taichu\\kafka\\test\\MyKafkaDemo.ini";
 		IniReader reader = new IniReader(IniFilename);
 		System.out.println(reader.getValue("StartServer", "cmd.start.zookeepter"));
 		System.out.println(reader.getValue("StartServer", "cmd.start.kafka"));

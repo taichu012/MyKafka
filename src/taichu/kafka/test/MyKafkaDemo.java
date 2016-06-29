@@ -19,7 +19,7 @@ class MyKafkaDemo implements ExitHandling {
 	public static Process zkp = null;
 	public static Process kfk = null;
 	//ini filename with path
-	public static String INI_FILENAME="D:\\eclipse-workspace\\KafkaTest\\src\\taichu\\kafka\\test\\MyKafkaDemo.ini";
+	public static String INI_FILENAME="D:\\RemoteSource\\git.oschina.net\\MyKafka\\src\\taichu\\kafka\\test\\MyKafkaDemo.ini";
 
 	/**
 	 * 
@@ -65,7 +65,7 @@ class MyKafkaDemo implements ExitHandling {
 		String cmdStartKafka = inird.GetValue("StartServer", "cmd.start.kafka");
 		try {
 			kfk = Runtime.getRuntime().exec(cmdStartKafka);
-			System.out.println("Start kafka...wait 20s...!");
+			System.out.println("Start kafka...wait 30s...!");
 			//Below handle standard inputstream of ZOOKEEPER PROCESS
 			//But it needn't because we start process as a indepandant CMD process!
 //			System.out.println("Start kafka start...wait 20s...!");
@@ -74,7 +74,7 @@ class MyKafkaDemo implements ExitHandling {
 //			while (s.hasNextLine()) {
 //				System.out.println(s.nextLine());
 //			}
-			Thread.sleep(20000);
+			Thread.sleep(30000);
 		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
 			System.out.println("Start kafka error, exit!");
@@ -115,17 +115,17 @@ class MyKafkaDemo implements ExitHandling {
 		System.out.println("MyKafkaDemo:准备执行退出前的操作！");
 
 		try {
-			System.out.println("Try to stop producer, wait 2s...");
+			System.out.println("MyKafkaDemo:Try to stop producer, wait 2s...");
 			pdr.ExitHandle();
 			Thread.sleep(2000);
-			System.out.println("Try to stop consumer, wait 2s...");
+			System.out.println("MyKafkaDemo:Try to stop consumer, wait 2s...");
 			csr.ExitHandle();
 			Thread.sleep(2000);
 			if (kfk!=null) kfk.destroy();
-			System.out.println("Try to stop kafka, wait 10s...");
+			System.out.println("MyKafkaDemo:Try to stop kafka, wait 10s...");
 			Thread.sleep(10000);
 			if (zkp!=null) zkp.destroy();
-			System.out.println("Try to stop zookeeper, wait 10s...");
+			System.out.println("MyKafkaDemo:Try to stop zookeeper, wait 10s...");
 			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
