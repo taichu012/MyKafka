@@ -17,13 +17,13 @@ public class IniReader {
 
 	protected HashMap<String, Properties> sections = new HashMap<String, Properties>();
 	// transient表示此字段不参加对象的序列化，可能是以为它是中间值！
-	private static transient String IniFilename = "";
+	private static volatile String IniFilename = "";
 	private transient String currentSecion;
 	private transient Properties current;
-	private static BufferedReader reader = null;
-	private static IniReader instance = null;
+	private BufferedReader reader = null;
+	private static volatile IniReader instance = null;
 
-	public static IniReader getInstance(String iniFilename) {
+	public synchronized static IniReader getInstance(String iniFilename) {
 		if (instance == null) {
 			instance = new IniReader(iniFilename);
 		} else if (!iniFilename.equals(IniFilename)) {
@@ -41,7 +41,7 @@ public class IniReader {
 			reader = new BufferedReader(new FileReader(iniFilename));
 			read(reader);
 			reader.close();
-			IniFilename = iniFilename;
+			setInifilename(iniFilename);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			System.out.println("Doesn't find Ini file(" + iniFilename + ")!");
@@ -52,6 +52,10 @@ public class IniReader {
 			reader = null;
 		}
 
+	}
+	
+	private synchronized void setInifilename(String iniFilename){
+		IniFilename = iniFilename;
 	}
 
 	protected void read(BufferedReader reader) throws IOException {

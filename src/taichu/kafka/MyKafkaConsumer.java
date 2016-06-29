@@ -17,7 +17,7 @@ import taichu.kafka.test.ExitHandling;
 public class MyKafkaConsumer  implements Runnable, ExitHandling {
 	
 	private static Logger log = Logger.getLogger("MyKafkaConsumer.class");
-	private static MyKafkaConsumer instance = null;
+	private static volatile MyKafkaConsumer instance = null;
 	private KafkaConsumer<String, String> consumer = null;
 	public static int MAX_NBR_GET_NOTHING=10;
 	public volatile boolean exitFlag = false; 
@@ -91,8 +91,15 @@ public class MyKafkaConsumer  implements Runnable, ExitHandling {
 		int exitCountDown=MAX_NBR_GET_NOTHING;
 
 		KafkaConsumer<String, String> c = MyKafkaConsumer.getInstance().consumer;
-		c.subscribe(Arrays.asList(MyKafkaConfig.topic1, MyKafkaConfig.topic2, MyKafkaConfig.topic3));
-		log.debug("CONSUMER:thread started!");
+		if (c!=null) {
+			c.subscribe(Arrays.asList(MyKafkaConfig.topic1, MyKafkaConfig.topic2, MyKafkaConfig.topic3));
+			log.debug("CONSUMER:thread started!");
+		}else {
+			log.error("CONSUMER:thread started error!");
+			return;
+			
+		}
+
 		while (!exitFlag) {
 			ConsumerRecords<String, String> records = consumer.poll(100);
 			

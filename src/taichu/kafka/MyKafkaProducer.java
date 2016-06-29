@@ -31,7 +31,7 @@ import taichu.kafka.test.ExitHandling;
 public class MyKafkaProducer implements Runnable, ExitHandling {
 
 	private static Logger log = Logger.getLogger("MyKafkaProducer.class");
-	private static MyKafkaProducer instance = null;
+	private static volatile MyKafkaProducer instance = null;
 	private KafkaProducer<String, String> producer = null;
 	public volatile boolean exitFlag = false; 
 
@@ -100,7 +100,11 @@ public class MyKafkaProducer implements Runnable, ExitHandling {
 	public void run() {
 		int Nbr = 1;
 		KafkaProducer<String, String> p = MyKafkaProducer.getInstance().producer;
-
+		if (p==null) {
+			log.error("producer: thread started error!");
+			return;
+		}
+		
 		//while (Nbr<=50){
 		while (!exitFlag) {
 			// 定义消息

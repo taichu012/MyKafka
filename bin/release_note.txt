@@ -1,4 +1,4 @@
-++++++++++++++++
+﻿++++++++++++++++
 Release Notes:
 Author：taichu
 ++++++++++++++++
@@ -20,7 +20,7 @@ REQ0011：综合前面开发内容，实现了MyKafkaDemo启动2个进程和2个
 实现了console输入任何内容（比如ENTER回车）就结束程序，通过钩子勾到shutdown消息，妥善关闭2个进程和2个现场，
 但2个进程是独立的2个cmd窗口，还需手动关闭（推荐在WIN7的任务管理器中对2个cmd进程“结束进程树”而不是“结束进程”，
 这样会级联的关闭cmd启动的java子进程！如果发现java子进程上未关闭，可在任务管理器中关闭它们（jconsole中可以看到java进程号）
-
+REQ0012：增加了对log4j的支持，输出多个log文件到根目录
 
 
 
@@ -33,13 +33,15 @@ TODOLIST:
 ++++++++++++++++
 
 1.【CLOSED】implement consumer;
-2.setup log4j(console output and log file output) 
+2.【CLOSED】setup log4j(console output and log file output) 
 3.【CLOSED】setup command line start mode (as producer ONLY,consumer ONLY, both,...) 
-4.setup Control Protocol to handle producer & consumer; 
-5.setup socket data input to producer; 5.setup http/URL data input to producer(use tomcat?)
-6.jmeter发送message给producer来测试
-7.尝试用生物调控因子来动态的处理producer和consumer的数量（是否需要用到pool开源库？）
-8.【CLOSED】放入GITHUB或oschina的开源地方
+4.【CLOSED】放入GITHUB或oschina的开源地方
+5.增加对maven的支持
+6.setup socket data input to producer; 
+7.测试jmeter发送message给producer来测试
+8.setup http/URL data input to producer(use tomcat?)
+9.setup Control Protocol to handle producer & consumer; 
+10.尝试用生物调控因子来动态的处理producer和consumer的数量（是否需要用到pool开源库？）
 
 
 
