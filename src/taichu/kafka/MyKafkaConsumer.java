@@ -70,7 +70,8 @@ public class MyKafkaConsumer  implements Runnable, ExitHandling {
 			// //old way
 
 		} catch (Exception e) {
-			System.out.println("Got exception: " + e.toString());
+			log.error("Got exception: " + e.toString());
+			//System.out.println("Got exception: " + e.toString());
 			log.debug("Got exception: " + e.toString());
 		}
 	}
@@ -80,6 +81,7 @@ public class MyKafkaConsumer  implements Runnable, ExitHandling {
 		if (instance == null) {
 			instance = new MyKafkaConsumer();
 		}
+		log.debug("CONSUMER:Got instance and return to caller");
 		return instance;
 	}
 	
@@ -90,6 +92,7 @@ public class MyKafkaConsumer  implements Runnable, ExitHandling {
 
 		KafkaConsumer<String, String> c = MyKafkaConsumer.getInstance().consumer;
 		c.subscribe(Arrays.asList(MyKafkaConfig.topic1, MyKafkaConfig.topic2, MyKafkaConfig.topic3));
+		log.debug("CONSUMER:thread started!");
 		while (!exitFlag) {
 			ConsumerRecords<String, String> records = consumer.poll(100);
 			
@@ -101,20 +104,24 @@ public class MyKafkaConsumer  implements Runnable, ExitHandling {
 			};
 			
 			for (ConsumerRecord<String, String> record: records) {
-				System.out.printf("Consumer: got msg=[offset = %d, key = %s, value = %s] \n", record.offset(), record.key(), record.value());
+				log.info("Consumer: got msg, offset=["+record.offset()+"],key=["+record.key()+"],val=["+record.value()+"]"+"\n");
+//				System.out.printf("Consumer: got msg=[offset = %d, key = %s, value = %s] \n", record.offset(), record.key(), record.value());
 			}
 			try {
-				System.out.println("Consumer: sleep 5s...");
+				log.info("Consumer: sleep 5s...");
+//				System.out.println("Consumer: sleep 5s...");
 				Thread.sleep(5000);
 				//连续消息满一定次数就退出；
 				if (exitCountDown<=0){
-					System.out.println("Consumer: Exit after "+MAX_NBR_GET_NOTHING*5+
+					log.debug("Exit after "+MAX_NBR_GET_NOTHING*5+
 							"s get nothing!");
+//					System.out.println("Consumer: Exit after "+MAX_NBR_GET_NOTHING*5+
+//							"s get nothing!");
 					exitFlag=true;
 				}
 			} catch (InterruptedException e) {
 				e.printStackTrace();
-				log.debug(e.getMessage());
+				log.error(e.getMessage());
 				if (c != null)
 					c.close();
 				c = null;
@@ -126,7 +133,8 @@ public class MyKafkaConsumer  implements Runnable, ExitHandling {
 	
 
 	 public void finalize() {
-		 System.out.println("consumer: Got finalized event, before it do something first!"); 
+		 log.debug("consumer: Got finalized event, before it do something first!");
+//		 System.out.println("consumer: Got finalized event, before it do something first!"); 
 		 if (consumer!=null){
 			 consumer.close();
 		 }else {
@@ -136,7 +144,8 @@ public class MyKafkaConsumer  implements Runnable, ExitHandling {
 	 
 	@Override
 	public void ExitHandle() {
-		System.out.println("consumer:Try to stop consumer, wait 2s...");
+		log.debug("consumer:Try to stop consumer, wait 2s...");
+//		System.out.println("consumer:Try to stop consumer, wait 2s...");
 		//wait time for normally thread stopping by set flag!
 		exitFlag = true;
 	}

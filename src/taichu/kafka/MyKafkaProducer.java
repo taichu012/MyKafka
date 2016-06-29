@@ -52,8 +52,8 @@ public class MyKafkaProducer implements Runnable, ExitHandling {
 		try {
 			producer = new KafkaProducer<String, String>(props);
 		} catch (Exception e) {
-			System.out.println("Got exception: " + e.toString());
-			log.debug("Got exception: " + e.toString());
+//			System.out.println("Got exception: " + e.toString());
+			log.error("Got exception: " + e.toString());
 		}
 	}
 
@@ -61,6 +61,7 @@ public class MyKafkaProducer implements Runnable, ExitHandling {
 		if (instance == null) {
 			instance = new MyKafkaProducer();
 		}
+		log.debug("producer：初始化实例返回给caller！");
 		return instance;
 	}
 
@@ -79,7 +80,8 @@ public class MyKafkaProducer implements Runnable, ExitHandling {
 		// 推送消息到broker
 		MyKafkaProducer mykp=MyKafkaProducer.getInstance();
 		mykp.producer.send(data);
-		System.out.println("Producer: msg=["+msg+"] is sent.");
+		log.debug("Producer: msg=["+msg+"] is sent.");
+//		System.out.println("Producer: msg=["+msg+"] is sent.");
 		mykp.producer.close();
 		
 		//如果要测试如下线程，考虑到eclipse的调试结束button是突然中断（突然死亡），对kafka服务器和producer线程不好，
@@ -107,16 +109,17 @@ public class MyKafkaProducer implements Runnable, ExitHandling {
 			ProducerRecord<String, String> data = new ProducerRecord<String, String>(MyKafkaConfig.topic1, msg);
 			// 推送消息到broker
 			p.send(data);
-			log.info("Producer: msg=["+msg+"] is sent.");
-			System.out.println("Producer: msg=["+msg+"] is sent.");
+			log.debug("Producer: msg=["+msg+"] is sent.");
+//			System.out.println("Producer: msg=["+msg+"] is sent.");
 
 			Nbr++;
 			try {
-				System.out.println("Producer: sleep 2s...");
+				log.info("Producer: sleep 2s...");
+//				System.out.println("Producer: sleep 2s...");
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
-				log.debug(e.getMessage());
+				log.error(e.getMessage());
 				if (p != null)
 					p.close();
 				p = null;
@@ -127,7 +130,8 @@ public class MyKafkaProducer implements Runnable, ExitHandling {
 	}
 
 	 public void finalize() {
-		 System.out.println("producer: Got finalized event, before it do something first!"); 
+		 log.info("producer: Got finalized event, before it do something first!");
+//		 System.out.println("producer: Got finalized event, before it do something first!"); 
 		 if (producer!=null){
 			 producer.close();
 		 }else {
@@ -137,7 +141,8 @@ public class MyKafkaProducer implements Runnable, ExitHandling {
 	 
 	@Override
 	public void ExitHandle() {
-		System.out.println("Producer:Try to stop producer, wait 2s...");
+		log.info("Producer:Try to stop producer, wait 2s...");
+//		System.out.println("Producer:Try to stop producer, wait 2s...");
 		//wait time for normally thread stopping by set flag!
 		exitFlag = true;
 	}

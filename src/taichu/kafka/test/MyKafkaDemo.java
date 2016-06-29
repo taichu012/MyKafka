@@ -4,6 +4,9 @@
 package taichu.kafka.test;
 
 import java.io.IOException;
+
+import org.apache.log4j.Logger;
+
 import taichu.kafka.MyKafkaConsumer;
 import taichu.kafka.MyKafkaProducer;
 import taichu.kafka.tool.IniReader;
@@ -13,7 +16,7 @@ import taichu.kafka.tool.IniReader;
  *
  */
 class MyKafkaDemo implements ExitHandling {
-
+	private static Logger log = Logger.getLogger("MyKafkaDemo.class");
 	public static MyKafkaProducer pdr = null;
 	public static MyKafkaConsumer csr = null;
 	public static Process zkp = null;
@@ -45,7 +48,8 @@ class MyKafkaDemo implements ExitHandling {
 		String cmdStartZk = inird.GetValue("StartServer", "cmd.start.zookeepter");
 		try {
 			zkp = Runtime.getRuntime().exec(cmdStartZk);
-			System.out.println("Start zookeeper...wait 10s...!");
+			log.info("Start zookeeper...wait 10s...!");
+//			System.out.println("Start zookeeper...wait 10s...!");
 			
 			//Below handle standard inputstream of ZOOKEEPER PROCESS
 			//But it needn't because we start process as a indepandant CMD process!
@@ -57,7 +61,8 @@ class MyKafkaDemo implements ExitHandling {
 			Thread.sleep(10000);
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("Start kafka error, exit!");
+			log.error("Start zookeeper error, exit!");
+//			System.out.println("Start zookeeper error, exit!");
 			return; //return and exit because start server error, cannot test further.
 		}
 
@@ -65,7 +70,8 @@ class MyKafkaDemo implements ExitHandling {
 		String cmdStartKafka = inird.GetValue("StartServer", "cmd.start.kafka");
 		try {
 			kfk = Runtime.getRuntime().exec(cmdStartKafka);
-			System.out.println("Start kafka...wait 30s...!");
+			log.info("Start kafka...wait 30s...!");
+//			System.out.println("Start kafka...wait 30s...!");
 			//Below handle standard inputstream of ZOOKEEPER PROCESS
 			//But it needn't because we start process as a indepandant CMD process!
 //			System.out.println("Start kafka start...wait 20s...!");
@@ -77,7 +83,8 @@ class MyKafkaDemo implements ExitHandling {
 			Thread.sleep(30000);
 		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
-			System.out.println("Start kafka error, exit!");
+			log.error("Start kafka error, exit!");
+//			System.out.println("Start kafka error, exit!");
 			return; //return and exit because start server error, cannot test further.
 		}
 
@@ -100,11 +107,13 @@ class MyKafkaDemo implements ExitHandling {
 
 		// use ENTER to call exit() and call shutdown hooker if setted， because
 		// eclipse terminates ALL and dangrous！
-		System.out.println("press ENTER to call System.exit() and run the shutdown routine.");
+		log.info("press ENTER to call System.exit() and run the shutdown routine.");
+//		System.out.println("press ENTER to call System.exit() and run the shutdown routine.");
 		try {
 			System.in.read();
 		} catch (IOException e) {
 			e.printStackTrace();
+			log.debug(e.getLocalizedMessage());
 		}
 		System.exit(0);
 	}
@@ -112,26 +121,31 @@ class MyKafkaDemo implements ExitHandling {
 	@Override
 	public void ExitHandle() {
 		//正常exit前，做些准备工作
-		System.out.println("MyKafkaDemo:准备执行退出前的操作！");
+		log.info("MyKafkaDemo:准备执行退出前的操作！");
+//		System.out.println("MyKafkaDemo:准备执行退出前的操作！");
 
 		try {
-			System.out.println("MyKafkaDemo:Try to stop producer, wait 2s...");
+			log.info("MyKafkaDemo:Try to stop producer, wait 2s...");
+//			System.out.println("MyKafkaDemo:Try to stop producer, wait 2s...");
 			pdr.ExitHandle();
 			Thread.sleep(2000);
-			System.out.println("MyKafkaDemo:Try to stop consumer, wait 2s...");
+			log.info("MyKafkaDemo:Try to stop consumer, wait 2s...");
+//			System.out.println("MyKafkaDemo:Try to stop consumer, wait 2s...");
 			csr.ExitHandle();
 			Thread.sleep(2000);
 			if (kfk!=null) kfk.destroy();
-			System.out.println("MyKafkaDemo:Try to stop kafka, wait 10s...");
+			log.info("MyKafkaDemo:Try to stop kafka, wait 10s...");
+//			System.out.println("MyKafkaDemo:Try to stop kafka, wait 10s...");
 			Thread.sleep(10000);
 			if (zkp!=null) zkp.destroy();
-			System.out.println("MyKafkaDemo:Try to stop zookeeper, wait 10s...");
+			log.info("MyKafkaDemo:Try to stop zookeeper, wait 10s...");
+//			System.out.println("MyKafkaDemo:Try to stop zookeeper, wait 10s...");
 			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-
-		System.out.println("MyKafkaDemo:退出前的操作退出完成！");
+		log.info("MyKafkaDemo:退出前的操作退出完成！");
+//		System.out.println("MyKafkaDemo:退出前的操作退出完成！");
 
 	}
 

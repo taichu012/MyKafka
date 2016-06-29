@@ -1,0 +1,7 @@
+[DEBUG] [2016-06-29 15:54:59] [MyKafkaConsumer:getInstance:84] CONSUMER:Got instance and return to caller
+[DEBUG] [2016-06-29 15:54:59] [MyKafkaConsumer:getInstance:84] CONSUMER:Got instance and return to caller
+[DEBUG] [2016-06-29 15:54:59] [MyKafkaConsumer:run:95] CONSUMER:thread started!
+[DEBUG] [2016-06-29 15:56:58] [MyKafkaConsumer:getInstance:84] CONSUMER:Got instance and return to caller
+[DEBUG] [2016-06-29 15:56:58] [MyKafkaConsumer:getInstance:84] CONSUMER:Got instance and return to caller
+[DEBUG] [2016-06-29 15:56:58] [MyKafkaConsumer:run:95] CONSUMER:thread started!
+[DEBUG] [2016-06-29 15:57:50] [MyKafkaConsumer:ExitHandle:145] consumer:Try to stop consumer, wait 2s...
