@@ -136,7 +136,7 @@ public class MyKafkaConsumer  implements Runnable, ExitHandling {
 	 
 	@Override
 	public void ExitHandle() {
-		System.out.println("Try to stop consumer, wait 2s...");
+		System.out.println("consumer:Try to stop consumer, wait 2s...");
 		//wait time for normally thread stopping by set flag!
 		exitFlag = true;
 	}

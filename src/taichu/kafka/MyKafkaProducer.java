@@ -137,7 +137,7 @@ public class MyKafkaProducer implements Runnable, ExitHandling {
 	 
 	@Override
 	public void ExitHandle() {
-		System.out.println("Try to stop producer, wait 2s...");
+		System.out.println("Producer:Try to stop producer, wait 2s...");
 		//wait time for normally thread stopping by set flag!
 		exitFlag = true;
 	}
