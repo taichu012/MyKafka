@@ -886,3 +886,980 @@
 [INFO ] [2016-06-29 15:57:52] [MyKafkaDemo:ExitHandle:137] MyKafkaDemo:Try to stop kafka, wait 10s...
 [INFO ] [2016-06-29 15:58:02] [MyKafkaDemo:ExitHandle:141] MyKafkaDemo:Try to stop zookeeper, wait 10s...
 [INFO ] [2016-06-29 15:58:12] [MyKafkaDemo:ExitHandle:147] MyKafkaDemo:退出前的操作退出完成！
+[INFO ] [2016-06-29 20:56:54] [MyKafkaDemo:main:51] Start zookeeper...wait 10s...!
+[INFO ] [2016-06-29 20:57:04] [MyKafkaDemo:main:73] Start kafka...wait 30s...!
+[INFO ] [2016-06-29 20:57:34] [AbstractConfig:logAll:178] ProducerConfig values: 
+	interceptor.classes = null
+	request.timeout.ms = 30000
+	ssl.truststore.password = null
+	retry.backoff.ms = 100
+	buffer.memory = 33554432
+	batch.size = 16384
+	ssl.keymanager.algorithm = SunX509
+	receive.buffer.bytes = 32768
+	ssl.key.password = null
+	ssl.cipher.suites = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.service.name = null
+	ssl.provider = null
+	max.in.flight.requests.per.connection = 5
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	bootstrap.servers = [localhost:9092]
+	client.id = 
+	max.request.size = 1048576
+	acks = all
+	linger.ms = 1
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	metadata.fetch.timeout.ms = 60000
+	ssl.endpoint.identification.algorithm = null
+	ssl.keystore.location = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	block.on.buffer.full = false
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	metrics.sample.window.ms = 30000
+	security.protocol = PLAINTEXT
+	metadata.max.age.ms = 300000
+	ssl.protocol = TLS
+	sasl.kerberos.min.time.before.relogin = 60000
+	timeout.ms = 30000
+	connections.max.idle.ms = 540000
+	ssl.trustmanager.algorithm = PKIX
+	metric.reporters = []
+	ssl.truststore.type = JKS
+	compression.type = none
+	retries = 0
+	max.block.ms = 60000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	send.buffer.bytes = 131072
+	reconnect.backoff.ms = 50
+	metrics.num.samples = 2
+	ssl.keystore.type = JKS
+
+[INFO ] [2016-06-29 20:57:35] [AbstractConfig:logAll:178] ProducerConfig values: 
+	interceptor.classes = null
+	request.timeout.ms = 30000
+	ssl.truststore.password = null
+	retry.backoff.ms = 100
+	buffer.memory = 33554432
+	batch.size = 16384
+	ssl.keymanager.algorithm = SunX509
+	receive.buffer.bytes = 32768
+	ssl.key.password = null
+	ssl.cipher.suites = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.service.name = null
+	ssl.provider = null
+	max.in.flight.requests.per.connection = 5
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	bootstrap.servers = [localhost:9092]
+	client.id = producer-1
+	max.request.size = 1048576
+	acks = all
+	linger.ms = 1
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	metadata.fetch.timeout.ms = 60000
+	ssl.endpoint.identification.algorithm = null
+	ssl.keystore.location = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	block.on.buffer.full = false
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	metrics.sample.window.ms = 30000
+	security.protocol = PLAINTEXT
+	metadata.max.age.ms = 300000
+	ssl.protocol = TLS
+	sasl.kerberos.min.time.before.relogin = 60000
+	timeout.ms = 30000
+	connections.max.idle.ms = 540000
+	ssl.trustmanager.algorithm = PKIX
+	metric.reporters = []
+	ssl.truststore.type = JKS
+	compression.type = none
+	retries = 0
+	max.block.ms = 60000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	send.buffer.bytes = 131072
+	reconnect.backoff.ms = 50
+	metrics.num.samples = 2
+	ssl.keystore.type = JKS
+
+[INFO ] [2016-06-29 20:57:35] [AppInfoParser$AppInfo:<init>:83] Kafka version : 0.10.0.0
+[INFO ] [2016-06-29 20:57:35] [AppInfoParser$AppInfo:<init>:84] Kafka commitId : b8642491e78c5a13
+[INFO ] [2016-06-29 20:57:35] [AbstractConfig:logAll:178] ConsumerConfig values: 
+	interceptor.classes = null
+	request.timeout.ms = 40000
+	check.crcs = true
+	ssl.truststore.password = null
+	retry.backoff.ms = 100
+	ssl.keymanager.algorithm = SunX509
+	receive.buffer.bytes = 65536
+	ssl.key.password = null
+	ssl.cipher.suites = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.service.name = null
+	ssl.provider = null
+	session.timeout.ms = 30000
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	max.poll.records = 2147483647
+	bootstrap.servers = [localhost:9092]
+	client.id = 
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	auto.offset.reset = latest
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	max.partition.fetch.bytes = 1048576
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	ssl.endpoint.identification.algorithm = null
+	ssl.keystore.location = null
+	ssl.truststore.location = null
+	exclude.internal.topics = true
+	ssl.keystore.password = null
+	metrics.sample.window.ms = 30000
+	security.protocol = PLAINTEXT
+	metadata.max.age.ms = 300000
+	auto.commit.interval.ms = 1000
+	ssl.protocol = TLS
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.trustmanager.algorithm = PKIX
+	group.id = testgroup1
+	enable.auto.commit = true
+	metric.reporters = []
+	ssl.truststore.type = JKS
+	send.buffer.bytes = 131072
+	reconnect.backoff.ms = 50
+	metrics.num.samples = 2
+	ssl.keystore.type = JKS
+	heartbeat.interval.ms = 3000
+
+[INFO ] [2016-06-29 20:57:35] [AbstractConfig:logAll:178] ConsumerConfig values: 
+	interceptor.classes = null
+	request.timeout.ms = 40000
+	check.crcs = true
+	ssl.truststore.password = null
+	retry.backoff.ms = 100
+	ssl.keymanager.algorithm = SunX509
+	receive.buffer.bytes = 65536
+	ssl.key.password = null
+	ssl.cipher.suites = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.service.name = null
+	ssl.provider = null
+	session.timeout.ms = 30000
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	max.poll.records = 2147483647
+	bootstrap.servers = [localhost:9092]
+	client.id = consumer-1
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	auto.offset.reset = latest
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	max.partition.fetch.bytes = 1048576
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	ssl.endpoint.identification.algorithm = null
+	ssl.keystore.location = null
+	ssl.truststore.location = null
+	exclude.internal.topics = true
+	ssl.keystore.password = null
+	metrics.sample.window.ms = 30000
+	security.protocol = PLAINTEXT
+	metadata.max.age.ms = 300000
+	auto.commit.interval.ms = 1000
+	ssl.protocol = TLS
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.trustmanager.algorithm = PKIX
+	group.id = testgroup1
+	enable.auto.commit = true
+	metric.reporters = []
+	ssl.truststore.type = JKS
+	send.buffer.bytes = 131072
+	reconnect.backoff.ms = 50
+	metrics.num.samples = 2
+	ssl.keystore.type = JKS
+	heartbeat.interval.ms = 3000
+
+[INFO ] [2016-06-29 20:57:35] [AppInfoParser$AppInfo:<init>:83] Kafka version : 0.10.0.0
+[INFO ] [2016-06-29 20:57:35] [AppInfoParser$AppInfo:<init>:84] Kafka commitId : b8642491e78c5a13
+[INFO ] [2016-06-29 20:57:35] [MyKafkaDemo:main:110] press ENTER to call System.exit() and run the shutdown routine.
+[WARN ] [2016-06-29 20:57:35] [NetworkClient$DefaultMetadataUpdater:handleResponse:600] Error while fetching metadata with correlation id 0 : {testtopic1=LEADER_NOT_AVAILABLE}
+[WARN ] [2016-06-29 20:57:35] [NetworkClient$DefaultMetadataUpdater:handleResponse:600] Error while fetching metadata with correlation id 1 : {testtopic1=LEADER_NOT_AVAILABLE}
+[WARN ] [2016-06-29 20:57:36] [NetworkClient$DefaultMetadataUpdater:handleResponse:600] Error while fetching metadata with correlation id 2 : {testtopic1=LEADER_NOT_AVAILABLE}
+[WARN ] [2016-06-29 20:57:36] [NetworkClient$DefaultMetadataUpdater:handleResponse:600] Error while fetching metadata with correlation id 3 : {testtopic1=LEADER_NOT_AVAILABLE}
+[WARN ] [2016-06-29 20:57:36] [NetworkClient$DefaultMetadataUpdater:handleResponse:600] Error while fetching metadata with correlation id 1 : {testtopic2=LEADER_NOT_AVAILABLE, testtopic1=LEADER_NOT_AVAILABLE, testtopic3=LEADER_NOT_AVAILABLE}
+[WARN ] [2016-06-29 20:57:37] [NetworkClient$DefaultMetadataUpdater:handleResponse:600] Error while fetching metadata with correlation id 2 : {testtopic3=LEADER_NOT_AVAILABLE}
+[WARN ] [2016-06-29 20:57:37] [NetworkClient$DefaultMetadataUpdater:handleResponse:600] Error while fetching metadata with correlation id 4 : {testtopic3=LEADER_NOT_AVAILABLE}
+[INFO ] [2016-06-29 20:57:43] [AbstractCoordinator:handleGroupMetadataResponse:505] Discovered coordinator 192.168.100.103:9092 (id: 2147483647 rack: null) for group testgroup1.
+[INFO ] [2016-06-29 20:57:43] [ConsumerCoordinator:onJoinPrepare:280] Revoking previously assigned partitions [] for group testgroup1
+[INFO ] [2016-06-29 20:57:43] [AbstractCoordinator:sendJoinGroupRequest:326] (Re-)joining group testgroup1
+[INFO ] [2016-06-29 20:57:43] [AbstractCoordinator:coordinatorDead:542] Marking the coordinator 192.168.100.103:9092 (id: 2147483647 rack: null) dead for group testgroup1
+[INFO ] [2016-06-29 20:57:43] [AbstractCoordinator:handleGroupMetadataResponse:505] Discovered coordinator 192.168.100.103:9092 (id: 2147483647 rack: null) for group testgroup1.
+[INFO ] [2016-06-29 20:57:43] [AbstractCoordinator:sendJoinGroupRequest:326] (Re-)joining group testgroup1
+[INFO ] [2016-06-29 20:57:43] [AbstractCoordinator$SyncGroupResponseHandler:handle:434] Successfully joined group testgroup1 with generation 1
+[INFO ] [2016-06-29 20:57:43] [ConsumerCoordinator:onJoinComplete:219] Setting newly assigned partitions [testtopic1-0, testtopic3-0, testtopic2-0] for group testgroup1
+[INFO ] [2016-06-29 20:58:52] [MyKafkaDemo:ExitHandle:124] MyKafkaDemo:准备执行退出前的操作！
+[INFO ] [2016-06-29 20:58:52] [MyKafkaDemo:ExitHandle:128] MyKafkaDemo:Try to stop producer, wait 2s...
+[INFO ] [2016-06-29 20:58:54] [MyKafkaDemo:ExitHandle:132] MyKafkaDemo:Try to stop consumer, wait 2s...
+[INFO ] [2016-06-29 20:58:56] [MyKafkaDemo:ExitHandle:137] MyKafkaDemo:Try to stop kafka, wait 10s...
+[INFO ] [2016-06-29 20:59:06] [MyKafkaDemo:ExitHandle:141] MyKafkaDemo:Try to stop zookeeper, wait 10s...
+[INFO ] [2016-06-29 20:59:16] [MyKafkaDemo:ExitHandle:147] MyKafkaDemo:退出前的操作退出完成！
+[INFO ] [2016-06-29 21:01:47] [MyKafkaDemo:main:51] Start zookeeper...wait 10s...!
+[INFO ] [2016-06-29 21:01:58] [MyKafkaDemo:main:73] Start kafka...wait 30s...!
+[INFO ] [2016-06-29 21:02:28] [AbstractConfig:logAll:178] ProducerConfig values: 
+	interceptor.classes = null
+	request.timeout.ms = 30000
+	ssl.truststore.password = null
+	retry.backoff.ms = 100
+	buffer.memory = 33554432
+	batch.size = 16384
+	ssl.keymanager.algorithm = SunX509
+	receive.buffer.bytes = 32768
+	ssl.key.password = null
+	ssl.cipher.suites = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.service.name = null
+	ssl.provider = null
+	max.in.flight.requests.per.connection = 5
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	bootstrap.servers = [localhost:9092]
+	client.id = 
+	max.request.size = 1048576
+	acks = all
+	linger.ms = 1
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	metadata.fetch.timeout.ms = 60000
+	ssl.endpoint.identification.algorithm = null
+	ssl.keystore.location = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	block.on.buffer.full = false
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	metrics.sample.window.ms = 30000
+	security.protocol = PLAINTEXT
+	metadata.max.age.ms = 300000
+	ssl.protocol = TLS
+	sasl.kerberos.min.time.before.relogin = 60000
+	timeout.ms = 30000
+	connections.max.idle.ms = 540000
+	ssl.trustmanager.algorithm = PKIX
+	metric.reporters = []
+	ssl.truststore.type = JKS
+	compression.type = none
+	retries = 0
+	max.block.ms = 60000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	send.buffer.bytes = 131072
+	reconnect.backoff.ms = 50
+	metrics.num.samples = 2
+	ssl.keystore.type = JKS
+
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name bufferpool-wait-time
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name buffer-exhausted-records
+[DEBUG] [2016-06-29 21:02:28] [Metadata:update:180] Updated cluster metadata version 1 to Cluster(nodes = [localhost:9092 (id: -1 rack: null)], partitions = [])
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name connections-closed:
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name connections-created:
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name bytes-sent-received:
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name bytes-sent:
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name bytes-received:
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name select-time:
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name io-time:
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name batch-size
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name compression-rate
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name queue-time
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name request-time
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name produce-throttle-time
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name records-per-request
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name record-retries
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name errors
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name record-size-max
+[DEBUG] [2016-06-29 21:02:28] [Sender:run:129] Starting Kafka producer I/O thread.
+[INFO ] [2016-06-29 21:02:28] [AbstractConfig:logAll:178] ProducerConfig values: 
+	interceptor.classes = null
+	request.timeout.ms = 30000
+	ssl.truststore.password = null
+	retry.backoff.ms = 100
+	buffer.memory = 33554432
+	batch.size = 16384
+	ssl.keymanager.algorithm = SunX509
+	receive.buffer.bytes = 32768
+	ssl.key.password = null
+	ssl.cipher.suites = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.service.name = null
+	ssl.provider = null
+	max.in.flight.requests.per.connection = 5
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	bootstrap.servers = [localhost:9092]
+	client.id = producer-1
+	max.request.size = 1048576
+	acks = all
+	linger.ms = 1
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	metadata.fetch.timeout.ms = 60000
+	ssl.endpoint.identification.algorithm = null
+	ssl.keystore.location = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	block.on.buffer.full = false
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	metrics.sample.window.ms = 30000
+	security.protocol = PLAINTEXT
+	metadata.max.age.ms = 300000
+	ssl.protocol = TLS
+	sasl.kerberos.min.time.before.relogin = 60000
+	timeout.ms = 30000
+	connections.max.idle.ms = 540000
+	ssl.trustmanager.algorithm = PKIX
+	metric.reporters = []
+	ssl.truststore.type = JKS
+	compression.type = none
+	retries = 0
+	max.block.ms = 60000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	send.buffer.bytes = 131072
+	reconnect.backoff.ms = 50
+	metrics.num.samples = 2
+	ssl.keystore.type = JKS
+
+[INFO ] [2016-06-29 21:02:28] [AppInfoParser$AppInfo:<init>:83] Kafka version : 0.10.0.0
+[INFO ] [2016-06-29 21:02:28] [AppInfoParser$AppInfo:<init>:84] Kafka commitId : b8642491e78c5a13
+[DEBUG] [2016-06-29 21:02:28] [KafkaProducer:<init>:329] Kafka producer started
+[DEBUG] [2016-06-29 21:02:28] [NetworkClient$DefaultMetadataUpdater:maybeUpdate:644] Initialize connection to node -1 for sending metadata request
+[DEBUG] [2016-06-29 21:02:28] [NetworkClient:initiateConnect:496] Initiating connection to node -1 at localhost:9092.
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name node--1.bytes-sent
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name node--1.bytes-received
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name node--1.latency
+[INFO ] [2016-06-29 21:02:28] [AbstractConfig:logAll:178] ConsumerConfig values: 
+	interceptor.classes = null
+	request.timeout.ms = 40000
+	check.crcs = true
+	ssl.truststore.password = null
+	retry.backoff.ms = 100
+	ssl.keymanager.algorithm = SunX509
+	receive.buffer.bytes = 65536
+	ssl.key.password = null
+	ssl.cipher.suites = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.service.name = null
+	ssl.provider = null
+	session.timeout.ms = 30000
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	max.poll.records = 2147483647
+	bootstrap.servers = [localhost:9092]
+	client.id = 
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	auto.offset.reset = latest
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	max.partition.fetch.bytes = 1048576
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	ssl.endpoint.identification.algorithm = null
+	ssl.keystore.location = null
+	ssl.truststore.location = null
+	exclude.internal.topics = true
+	ssl.keystore.password = null
+	metrics.sample.window.ms = 30000
+	security.protocol = PLAINTEXT
+	metadata.max.age.ms = 300000
+	auto.commit.interval.ms = 1000
+	ssl.protocol = TLS
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.trustmanager.algorithm = PKIX
+	group.id = testgroup1
+	enable.auto.commit = true
+	metric.reporters = []
+	ssl.truststore.type = JKS
+	send.buffer.bytes = 131072
+	reconnect.backoff.ms = 50
+	metrics.num.samples = 2
+	ssl.keystore.type = JKS
+	heartbeat.interval.ms = 3000
+
+[DEBUG] [2016-06-29 21:02:28] [KafkaConsumer:<init>:597] Starting the Kafka consumer
+[DEBUG] [2016-06-29 21:02:28] [NetworkClient:handleConnections:476] Completed connection to node -1
+[DEBUG] [2016-06-29 21:02:28] [Metadata:update:180] Updated cluster metadata version 1 to Cluster(nodes = [localhost:9092 (id: -1 rack: null)], partitions = [])
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name connections-closed:
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name connections-created:
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name bytes-sent-received:
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name bytes-sent:
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name bytes-received:
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name select-time:
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name io-time:
+[INFO ] [2016-06-29 21:02:28] [AbstractConfig:logAll:178] ConsumerConfig values: 
+	interceptor.classes = null
+	request.timeout.ms = 40000
+	check.crcs = true
+	ssl.truststore.password = null
+	retry.backoff.ms = 100
+	ssl.keymanager.algorithm = SunX509
+	receive.buffer.bytes = 65536
+	ssl.key.password = null
+	ssl.cipher.suites = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.service.name = null
+	ssl.provider = null
+	session.timeout.ms = 30000
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	max.poll.records = 2147483647
+	bootstrap.servers = [localhost:9092]
+	client.id = consumer-1
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	auto.offset.reset = latest
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	max.partition.fetch.bytes = 1048576
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	ssl.endpoint.identification.algorithm = null
+	ssl.keystore.location = null
+	ssl.truststore.location = null
+	exclude.internal.topics = true
+	ssl.keystore.password = null
+	metrics.sample.window.ms = 30000
+	security.protocol = PLAINTEXT
+	metadata.max.age.ms = 300000
+	auto.commit.interval.ms = 1000
+	ssl.protocol = TLS
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.trustmanager.algorithm = PKIX
+	group.id = testgroup1
+	enable.auto.commit = true
+	metric.reporters = []
+	ssl.truststore.type = JKS
+	send.buffer.bytes = 131072
+	reconnect.backoff.ms = 50
+	metrics.num.samples = 2
+	ssl.keystore.type = JKS
+	heartbeat.interval.ms = 3000
+
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name heartbeat-latency
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name join-latency
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name sync-latency
+[DEBUG] [2016-06-29 21:02:28] [NetworkClient$DefaultMetadataUpdater:maybeUpdate:640] Sending metadata request {topics=[testtopic1]} to node -1
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name commit-latency
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name bytes-fetched
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name records-fetched
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name fetch-latency
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name records-lag
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name fetch-throttle-time
+[INFO ] [2016-06-29 21:02:28] [AppInfoParser$AppInfo:<init>:83] Kafka version : 0.10.0.0
+[INFO ] [2016-06-29 21:02:28] [AppInfoParser$AppInfo:<init>:84] Kafka commitId : b8642491e78c5a13
+[DEBUG] [2016-06-29 21:02:28] [KafkaConsumer:<init>:696] Kafka consumer created
+[INFO ] [2016-06-29 21:02:28] [MyKafkaDemo:main:110] press ENTER to call System.exit() and run the shutdown routine.
+[DEBUG] [2016-06-29 21:02:28] [KafkaConsumer:subscribe:802] Subscribed to topic(s): testtopic1, testtopic2, testtopic3
+[DEBUG] [2016-06-29 21:02:28] [AbstractCoordinator:sendGroupCoordinatorRequest:476] Sending coordinator request for group testgroup1 to broker localhost:9092 (id: -1 rack: null)
+[DEBUG] [2016-06-29 21:02:28] [NetworkClient:initiateConnect:496] Initiating connection to node -1 at localhost:9092.
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name node--1.bytes-sent
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name node--1.bytes-received
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name node--1.latency
+[DEBUG] [2016-06-29 21:02:28] [NetworkClient:handleConnections:476] Completed connection to node -1
+[DEBUG] [2016-06-29 21:02:28] [Metadata:update:180] Updated cluster metadata version 2 to Cluster(nodes = [192.168.100.103:9092 (id: 0 rack: null)], partitions = [Partition(topic = testtopic1, partition = 0, leader = 0, replicas = [0,], isr = [0,]])
+[DEBUG] [2016-06-29 21:02:28] [NetworkClient:initiateConnect:496] Initiating connection to node 0 at 192.168.100.103:9092.
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name node-0.bytes-sent
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name node-0.bytes-received
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name node-0.latency
+[DEBUG] [2016-06-29 21:02:28] [NetworkClient:handleConnections:476] Completed connection to node 0
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name topic.testtopic1.records-per-batch
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name topic.testtopic1.bytes
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name topic.testtopic1.compression-rate
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name topic.testtopic1.record-retries
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name topic.testtopic1.record-errors
+[DEBUG] [2016-06-29 21:02:28] [NetworkClient$DefaultMetadataUpdater:maybeUpdate:640] Sending metadata request {topics=[testtopic2,testtopic1,testtopic3]} to node -1
+[DEBUG] [2016-06-29 21:02:28] [Metadata:update:180] Updated cluster metadata version 2 to Cluster(nodes = [192.168.100.103:9092 (id: 0 rack: null)], partitions = [Partition(topic = testtopic1, partition = 0, leader = 0, replicas = [0,], isr = [0,], Partition(topic = testtopic3, partition = 0, leader = 0, replicas = [0,], isr = [0,], Partition(topic = testtopic2, partition = 0, leader = 0, replicas = [0,], isr = [0,]])
+[DEBUG] [2016-06-29 21:02:28] [AbstractCoordinator:handleGroupMetadataResponse:489] Received group coordinator response ClientResponse(receivedTimeMs=1467205348738, disconnected=false, request=ClientRequest(expectResponse=true, callback=org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient$RequestFutureCompletionHandler@257f2ad0, request=RequestSend(header={api_key=10,api_version=0,correlation_id=0,client_id=consumer-1}, body={group_id=testgroup1}), createdTimeMs=1467205348620, sendTimeMs=1467205348725), responseBody={error_code=0,coordinator={node_id=0,host=192.168.100.103,port=9092}})
+[INFO ] [2016-06-29 21:02:28] [AbstractCoordinator:handleGroupMetadataResponse:505] Discovered coordinator 192.168.100.103:9092 (id: 2147483647 rack: null) for group testgroup1.
+[DEBUG] [2016-06-29 21:02:28] [NetworkClient:initiateConnect:496] Initiating connection to node 2147483647 at 192.168.100.103:9092.
+[INFO ] [2016-06-29 21:02:28] [ConsumerCoordinator:onJoinPrepare:280] Revoking previously assigned partitions [] for group testgroup1
+[INFO ] [2016-06-29 21:02:28] [AbstractCoordinator:sendJoinGroupRequest:326] (Re-)joining group testgroup1
+[DEBUG] [2016-06-29 21:02:28] [AbstractCoordinator:sendJoinGroupRequest:334] Sending JoinGroup ({group_id=testgroup1,session_timeout=30000,member_id=,protocol_type=consumer,group_protocols=[{protocol_name=range,protocol_metadata=java.nio.HeapByteBuffer[pos=0 lim=46 cap=46]}]}) to coordinator 192.168.100.103:9092 (id: 2147483647 rack: null)
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name node-2147483647.bytes-sent
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name node-2147483647.bytes-received
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name node-2147483647.latency
+[DEBUG] [2016-06-29 21:02:28] [NetworkClient:handleConnections:476] Completed connection to node 2147483647
+[DEBUG] [2016-06-29 21:02:28] [AbstractCoordinator$JoinGroupResponseHandler:handle:351] Received successful join group response for group testgroup1: {error_code=0,generation_id=1,group_protocol=range,leader_id=consumer-1-16aec5f7-99dc-4b17-8dfd-baefd2936c34,member_id=consumer-1-16aec5f7-99dc-4b17-8dfd-baefd2936c34,members=[{member_id=consumer-1-16aec5f7-99dc-4b17-8dfd-baefd2936c34,member_metadata=java.nio.HeapByteBuffer[pos=0 lim=46 cap=46]}]}
+[DEBUG] [2016-06-29 21:02:28] [ConsumerCoordinator:performAssignment:257] Performing assignment for group testgroup1 using strategy range with subscriptions {consumer-1-16aec5f7-99dc-4b17-8dfd-baefd2936c34=Subscription(topics=[testtopic2, testtopic1, testtopic3])}
+[DEBUG] [2016-06-29 21:02:28] [ConsumerCoordinator:performAssignment:262] Finished assignment for group testgroup1: {consumer-1-16aec5f7-99dc-4b17-8dfd-baefd2936c34=Assignment(partitions=[testtopic2-0, testtopic1-0, testtopic3-0])}
+[DEBUG] [2016-06-29 21:02:28] [AbstractCoordinator:onJoinLeader:408] Sending leader SyncGroup for group testgroup1 to coordinator 192.168.100.103:9092 (id: 2147483647 rack: null): {group_id=testgroup1,generation_id=1,member_id=consumer-1-16aec5f7-99dc-4b17-8dfd-baefd2936c34,group_assignment=[{member_id=consumer-1-16aec5f7-99dc-4b17-8dfd-baefd2936c34,member_assignment=java.nio.HeapByteBuffer[pos=0 lim=70 cap=70]}]}
+[INFO ] [2016-06-29 21:02:28] [AbstractCoordinator$SyncGroupResponseHandler:handle:434] Successfully joined group testgroup1 with generation 1
+[INFO ] [2016-06-29 21:02:28] [ConsumerCoordinator:onJoinComplete:219] Setting newly assigned partitions [testtopic1-0, testtopic3-0, testtopic2-0] for group testgroup1
+[DEBUG] [2016-06-29 21:02:28] [ConsumerCoordinator:sendOffsetFetchRequest:612] Group testgroup1 fetching committed offsets for partitions: [testtopic1-0, testtopic3-0, testtopic2-0]
+[DEBUG] [2016-06-29 21:02:28] [Fetcher:updateFetchPositions:173] Resetting offset for partition testtopic1-0 to the committed offset 37
+[DEBUG] [2016-06-29 21:02:28] [Fetcher:updateFetchPositions:173] Resetting offset for partition testtopic3-0 to the committed offset 0
+[DEBUG] [2016-06-29 21:02:28] [Fetcher:updateFetchPositions:173] Resetting offset for partition testtopic2-0 to the committed offset 0
+[DEBUG] [2016-06-29 21:02:28] [NetworkClient:initiateConnect:496] Initiating connection to node 0 at 192.168.100.103:9092.
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name node-0.bytes-sent
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name node-0.bytes-received
+[DEBUG] [2016-06-29 21:02:28] [Metrics:sensor:296] Added sensor with name node-0.latency
+[DEBUG] [2016-06-29 21:02:28] [NetworkClient:handleConnections:476] Completed connection to node 0
+[DEBUG] [2016-06-29 21:02:33] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 37 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:02:33] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:02:33] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:02:33] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 37 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:02:33] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:02:33] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:02:33] [AbstractCoordinator$HeartbeatCompletionHandler:handle:629] Received successful heartbeat response for group testgroup1
+[DEBUG] [2016-06-29 21:02:34] [Metrics:sensor:296] Added sensor with name topic.testtopic1.bytes-fetched
+[DEBUG] [2016-06-29 21:02:34] [Metrics:sensor:296] Added sensor with name topic.testtopic1.records-fetched
+[DEBUG] [2016-06-29 21:02:34] [Metrics:sensor:296] Added sensor with name topic.testtopic3.bytes-fetched
+[DEBUG] [2016-06-29 21:02:34] [Metrics:sensor:296] Added sensor with name topic.testtopic3.records-fetched
+[DEBUG] [2016-06-29 21:02:34] [Metrics:sensor:296] Added sensor with name topic.testtopic2.bytes-fetched
+[DEBUG] [2016-06-29 21:02:34] [Metrics:sensor:296] Added sensor with name topic.testtopic2.records-fetched
+[DEBUG] [2016-06-29 21:02:39] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 41 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:02:39] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:02:39] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:02:39] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 41 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:02:39] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:02:39] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:02:39] [AbstractCoordinator$HeartbeatCompletionHandler:handle:629] Received successful heartbeat response for group testgroup1
+[DEBUG] [2016-06-29 21:02:44] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 44 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:02:44] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:02:44] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:02:44] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 44 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:02:44] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:02:44] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:02:49] [AbstractCoordinator$HeartbeatCompletionHandler:handle:629] Received successful heartbeat response for group testgroup1
+[DEBUG] [2016-06-29 21:02:49] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 46 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:02:49] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:02:49] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:02:49] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 46 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:02:49] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:02:49] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:02:49] [AbstractCoordinator$HeartbeatCompletionHandler:handle:629] Received successful heartbeat response for group testgroup1
+[DEBUG] [2016-06-29 21:02:54] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 49 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:02:54] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:02:54] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:02:54] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 49 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:02:54] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:02:54] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:02:54] [AbstractCoordinator$HeartbeatCompletionHandler:handle:629] Received successful heartbeat response for group testgroup1
+[DEBUG] [2016-06-29 21:02:59] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 51 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:02:59] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:02:59] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:02:59] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 51 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:02:59] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:02:59] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:02:59] [AbstractCoordinator$HeartbeatCompletionHandler:handle:629] Received successful heartbeat response for group testgroup1
+[DEBUG] [2016-06-29 21:03:04] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 54 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:03:04] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:03:04] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:03:04] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 54 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:03:04] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:03:04] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:03:04] [AbstractCoordinator$HeartbeatCompletionHandler:handle:629] Received successful heartbeat response for group testgroup1
+[DEBUG] [2016-06-29 21:03:09] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 56 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:03:09] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:03:09] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:03:09] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 56 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:03:09] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:03:09] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:03:09] [AbstractCoordinator$HeartbeatCompletionHandler:handle:629] Received successful heartbeat response for group testgroup1
+[INFO ] [2016-06-29 21:03:12] [MyKafkaDemo:ExitHandle:124] MyKafkaDemo:准备执行退出前的操作！
+[INFO ] [2016-06-29 21:03:12] [MyKafkaDemo:ExitHandle:128] MyKafkaDemo:Try to stop producer, wait 2s...
+[DEBUG] [2016-06-29 21:03:14] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 59 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:03:14] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:03:14] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:03:14] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 59 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:03:14] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:03:14] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:03:14] [AbstractCoordinator$HeartbeatCompletionHandler:handle:629] Received successful heartbeat response for group testgroup1
+[INFO ] [2016-06-29 21:03:14] [MyKafkaDemo:ExitHandle:132] MyKafkaDemo:Try to stop consumer, wait 2s...
+[INFO ] [2016-06-29 21:03:16] [MyKafkaDemo:ExitHandle:137] MyKafkaDemo:Try to stop kafka, wait 10s...
+[INFO ] [2016-06-29 21:03:26] [MyKafkaDemo:ExitHandle:141] MyKafkaDemo:Try to stop zookeeper, wait 10s...
+[INFO ] [2016-06-29 21:03:36] [MyKafkaDemo:ExitHandle:147] MyKafkaDemo:退出前的操作退出完成！
+[INFO ] [2016-06-29 21:04:22] [MyKafkaDemo:main:51] Start zookeeper...wait 10s...!
+[INFO ] [2016-06-29 21:04:32] [MyKafkaDemo:main:73] Start kafka...wait 30s...!
+[INFO ] [2016-06-29 21:05:02] [AbstractConfig:logAll:178] ProducerConfig values: 
+	interceptor.classes = null
+	request.timeout.ms = 30000
+	ssl.truststore.password = null
+	retry.backoff.ms = 100
+	buffer.memory = 33554432
+	batch.size = 16384
+	ssl.keymanager.algorithm = SunX509
+	receive.buffer.bytes = 32768
+	ssl.key.password = null
+	ssl.cipher.suites = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.service.name = null
+	ssl.provider = null
+	max.in.flight.requests.per.connection = 5
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	bootstrap.servers = [localhost:9092]
+	client.id = 
+	max.request.size = 1048576
+	acks = all
+	linger.ms = 1
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	metadata.fetch.timeout.ms = 60000
+	ssl.endpoint.identification.algorithm = null
+	ssl.keystore.location = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	block.on.buffer.full = false
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	metrics.sample.window.ms = 30000
+	security.protocol = PLAINTEXT
+	metadata.max.age.ms = 300000
+	ssl.protocol = TLS
+	sasl.kerberos.min.time.before.relogin = 60000
+	timeout.ms = 30000
+	connections.max.idle.ms = 540000
+	ssl.trustmanager.algorithm = PKIX
+	metric.reporters = []
+	ssl.truststore.type = JKS
+	compression.type = none
+	retries = 0
+	max.block.ms = 60000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	send.buffer.bytes = 131072
+	reconnect.backoff.ms = 50
+	metrics.num.samples = 2
+	ssl.keystore.type = JKS
+
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name bufferpool-wait-time
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name buffer-exhausted-records
+[DEBUG] [2016-06-29 21:05:02] [Metadata:update:180] Updated cluster metadata version 1 to Cluster(nodes = [localhost:9092 (id: -1 rack: null)], partitions = [])
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name connections-closed:
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name connections-created:
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name bytes-sent-received:
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name bytes-sent:
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name bytes-received:
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name select-time:
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name io-time:
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name batch-size
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name compression-rate
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name queue-time
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name request-time
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name produce-throttle-time
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name records-per-request
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name record-retries
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name errors
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name record-size-max
+[DEBUG] [2016-06-29 21:05:02] [Sender:run:129] Starting Kafka producer I/O thread.
+[INFO ] [2016-06-29 21:05:02] [AbstractConfig:logAll:178] ProducerConfig values: 
+	interceptor.classes = null
+	request.timeout.ms = 30000
+	ssl.truststore.password = null
+	retry.backoff.ms = 100
+	buffer.memory = 33554432
+	batch.size = 16384
+	ssl.keymanager.algorithm = SunX509
+	receive.buffer.bytes = 32768
+	ssl.key.password = null
+	ssl.cipher.suites = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.service.name = null
+	ssl.provider = null
+	max.in.flight.requests.per.connection = 5
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	bootstrap.servers = [localhost:9092]
+	client.id = producer-1
+	max.request.size = 1048576
+	acks = all
+	linger.ms = 1
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	metadata.fetch.timeout.ms = 60000
+	ssl.endpoint.identification.algorithm = null
+	ssl.keystore.location = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	block.on.buffer.full = false
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	metrics.sample.window.ms = 30000
+	security.protocol = PLAINTEXT
+	metadata.max.age.ms = 300000
+	ssl.protocol = TLS
+	sasl.kerberos.min.time.before.relogin = 60000
+	timeout.ms = 30000
+	connections.max.idle.ms = 540000
+	ssl.trustmanager.algorithm = PKIX
+	metric.reporters = []
+	ssl.truststore.type = JKS
+	compression.type = none
+	retries = 0
+	max.block.ms = 60000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	send.buffer.bytes = 131072
+	reconnect.backoff.ms = 50
+	metrics.num.samples = 2
+	ssl.keystore.type = JKS
+
+[INFO ] [2016-06-29 21:05:02] [AppInfoParser$AppInfo:<init>:83] Kafka version : 0.10.0.0
+[INFO ] [2016-06-29 21:05:02] [AppInfoParser$AppInfo:<init>:84] Kafka commitId : b8642491e78c5a13
+[DEBUG] [2016-06-29 21:05:02] [KafkaProducer:<init>:329] Kafka producer started
+[DEBUG] [2016-06-29 21:05:02] [MyKafkaProducer:getInstance:64] producer：初始化实例返回给caller！
+[DEBUG] [2016-06-29 21:05:02] [MyKafkaProducer:getInstance:64] producer：初始化实例返回给caller！
+[DEBUG] [2016-06-29 21:05:02] [NetworkClient$DefaultMetadataUpdater:maybeUpdate:644] Initialize connection to node -1 for sending metadata request
+[DEBUG] [2016-06-29 21:05:02] [NetworkClient:initiateConnect:496] Initiating connection to node -1 at localhost:9092.
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name node--1.bytes-sent
+[INFO ] [2016-06-29 21:05:02] [AbstractConfig:logAll:178] ConsumerConfig values: 
+	interceptor.classes = null
+	request.timeout.ms = 40000
+	check.crcs = true
+	ssl.truststore.password = null
+	retry.backoff.ms = 100
+	ssl.keymanager.algorithm = SunX509
+	receive.buffer.bytes = 65536
+	ssl.key.password = null
+	ssl.cipher.suites = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.service.name = null
+	ssl.provider = null
+	session.timeout.ms = 30000
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	max.poll.records = 2147483647
+	bootstrap.servers = [localhost:9092]
+	client.id = 
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	auto.offset.reset = latest
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	max.partition.fetch.bytes = 1048576
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	ssl.endpoint.identification.algorithm = null
+	ssl.keystore.location = null
+	ssl.truststore.location = null
+	exclude.internal.topics = true
+	ssl.keystore.password = null
+	metrics.sample.window.ms = 30000
+	security.protocol = PLAINTEXT
+	metadata.max.age.ms = 300000
+	auto.commit.interval.ms = 1000
+	ssl.protocol = TLS
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.trustmanager.algorithm = PKIX
+	group.id = testgroup1
+	enable.auto.commit = true
+	metric.reporters = []
+	ssl.truststore.type = JKS
+	send.buffer.bytes = 131072
+	reconnect.backoff.ms = 50
+	metrics.num.samples = 2
+	ssl.keystore.type = JKS
+	heartbeat.interval.ms = 3000
+
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name node--1.bytes-received
+[DEBUG] [2016-06-29 21:05:02] [KafkaConsumer:<init>:597] Starting the Kafka consumer
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name node--1.latency
+[DEBUG] [2016-06-29 21:05:02] [Metadata:update:180] Updated cluster metadata version 1 to Cluster(nodes = [localhost:9092 (id: -1 rack: null)], partitions = [])
+[DEBUG] [2016-06-29 21:05:02] [NetworkClient:handleConnections:476] Completed connection to node -1
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name connections-closed:
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name connections-created:
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name bytes-sent-received:
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name bytes-sent:
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name bytes-received:
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name select-time:
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name io-time:
+[INFO ] [2016-06-29 21:05:02] [AbstractConfig:logAll:178] ConsumerConfig values: 
+	interceptor.classes = null
+	request.timeout.ms = 40000
+	check.crcs = true
+	ssl.truststore.password = null
+	retry.backoff.ms = 100
+	ssl.keymanager.algorithm = SunX509
+	receive.buffer.bytes = 65536
+	ssl.key.password = null
+	ssl.cipher.suites = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.service.name = null
+	ssl.provider = null
+	session.timeout.ms = 30000
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	max.poll.records = 2147483647
+	bootstrap.servers = [localhost:9092]
+	client.id = consumer-1
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	auto.offset.reset = latest
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	max.partition.fetch.bytes = 1048576
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	ssl.endpoint.identification.algorithm = null
+	ssl.keystore.location = null
+	ssl.truststore.location = null
+	exclude.internal.topics = true
+	ssl.keystore.password = null
+	metrics.sample.window.ms = 30000
+	security.protocol = PLAINTEXT
+	metadata.max.age.ms = 300000
+	auto.commit.interval.ms = 1000
+	ssl.protocol = TLS
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.trustmanager.algorithm = PKIX
+	group.id = testgroup1
+	enable.auto.commit = true
+	metric.reporters = []
+	ssl.truststore.type = JKS
+	send.buffer.bytes = 131072
+	reconnect.backoff.ms = 50
+	metrics.num.samples = 2
+	ssl.keystore.type = JKS
+	heartbeat.interval.ms = 3000
+
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name heartbeat-latency
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name join-latency
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name sync-latency
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name commit-latency
+[DEBUG] [2016-06-29 21:05:02] [NetworkClient$DefaultMetadataUpdater:maybeUpdate:640] Sending metadata request {topics=[testtopic1]} to node -1
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name bytes-fetched
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name records-fetched
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name fetch-latency
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name records-lag
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name fetch-throttle-time
+[INFO ] [2016-06-29 21:05:02] [AppInfoParser$AppInfo:<init>:83] Kafka version : 0.10.0.0
+[INFO ] [2016-06-29 21:05:02] [AppInfoParser$AppInfo:<init>:84] Kafka commitId : b8642491e78c5a13
+[DEBUG] [2016-06-29 21:05:02] [KafkaConsumer:<init>:696] Kafka consumer created
+[DEBUG] [2016-06-29 21:05:02] [MyKafkaConsumer:getInstance:84] CONSUMER:Got instance and return to caller
+[DEBUG] [2016-06-29 21:05:02] [MyKafkaConsumer:getInstance:84] CONSUMER:Got instance and return to caller
+[INFO ] [2016-06-29 21:05:02] [MyKafkaDemo:main:110] press ENTER to call System.exit() and run the shutdown routine.
+[DEBUG] [2016-06-29 21:05:02] [KafkaConsumer:subscribe:802] Subscribed to topic(s): testtopic1, testtopic2, testtopic3
+[DEBUG] [2016-06-29 21:05:02] [MyKafkaConsumer:run:96] CONSUMER:thread started!
+[DEBUG] [2016-06-29 21:05:02] [AbstractCoordinator:sendGroupCoordinatorRequest:476] Sending coordinator request for group testgroup1 to broker localhost:9092 (id: -1 rack: null)
+[DEBUG] [2016-06-29 21:05:02] [NetworkClient:initiateConnect:496] Initiating connection to node -1 at localhost:9092.
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name node--1.bytes-sent
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name node--1.bytes-received
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name node--1.latency
+[DEBUG] [2016-06-29 21:05:02] [NetworkClient:handleConnections:476] Completed connection to node -1
+[DEBUG] [2016-06-29 21:05:02] [Metadata:update:180] Updated cluster metadata version 2 to Cluster(nodes = [192.168.100.103:9092 (id: 0 rack: null)], partitions = [Partition(topic = testtopic1, partition = 0, leader = 0, replicas = [0,], isr = [0,]])
+[DEBUG] [2016-06-29 21:05:02] [MyKafkaProducer:run:116] Producer: msg=[MessageTo_Broker_消息MSG_1] is sent.
+[INFO ] [2016-06-29 21:05:02] [MyKafkaProducer:run:121] Producer: sleep 2s...
+[DEBUG] [2016-06-29 21:05:02] [NetworkClient:initiateConnect:496] Initiating connection to node 0 at 192.168.100.103:9092.
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name node-0.bytes-sent
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name node-0.bytes-received
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name node-0.latency
+[DEBUG] [2016-06-29 21:05:02] [NetworkClient:handleConnections:476] Completed connection to node 0
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name topic.testtopic1.records-per-batch
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name topic.testtopic1.bytes
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name topic.testtopic1.compression-rate
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name topic.testtopic1.record-retries
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name topic.testtopic1.record-errors
+[DEBUG] [2016-06-29 21:05:02] [NetworkClient$DefaultMetadataUpdater:maybeUpdate:640] Sending metadata request {topics=[testtopic2,testtopic1,testtopic3]} to node -1
+[DEBUG] [2016-06-29 21:05:02] [Metadata:update:180] Updated cluster metadata version 2 to Cluster(nodes = [192.168.100.103:9092 (id: 0 rack: null)], partitions = [Partition(topic = testtopic1, partition = 0, leader = 0, replicas = [0,], isr = [0,], Partition(topic = testtopic3, partition = 0, leader = 0, replicas = [0,], isr = [0,], Partition(topic = testtopic2, partition = 0, leader = 0, replicas = [0,], isr = [0,]])
+[DEBUG] [2016-06-29 21:05:02] [AbstractCoordinator:handleGroupMetadataResponse:489] Received group coordinator response ClientResponse(receivedTimeMs=1467205502808, disconnected=false, request=ClientRequest(expectResponse=true, callback=org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient$RequestFutureCompletionHandler@3fd3d0eb, request=RequestSend(header={api_key=10,api_version=0,correlation_id=0,client_id=consumer-1}, body={group_id=testgroup1}), createdTimeMs=1467205502686, sendTimeMs=1467205502791), responseBody={error_code=0,coordinator={node_id=0,host=192.168.100.103,port=9092}})
+[INFO ] [2016-06-29 21:05:02] [AbstractCoordinator:handleGroupMetadataResponse:505] Discovered coordinator 192.168.100.103:9092 (id: 2147483647 rack: null) for group testgroup1.
+[DEBUG] [2016-06-29 21:05:02] [NetworkClient:initiateConnect:496] Initiating connection to node 2147483647 at 192.168.100.103:9092.
+[INFO ] [2016-06-29 21:05:02] [ConsumerCoordinator:onJoinPrepare:280] Revoking previously assigned partitions [] for group testgroup1
+[INFO ] [2016-06-29 21:05:02] [AbstractCoordinator:sendJoinGroupRequest:326] (Re-)joining group testgroup1
+[DEBUG] [2016-06-29 21:05:02] [AbstractCoordinator:sendJoinGroupRequest:334] Sending JoinGroup ({group_id=testgroup1,session_timeout=30000,member_id=,protocol_type=consumer,group_protocols=[{protocol_name=range,protocol_metadata=java.nio.HeapByteBuffer[pos=0 lim=46 cap=46]}]}) to coordinator 192.168.100.103:9092 (id: 2147483647 rack: null)
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name node-2147483647.bytes-sent
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name node-2147483647.bytes-received
+[DEBUG] [2016-06-29 21:05:02] [Metrics:sensor:296] Added sensor with name node-2147483647.latency
+[DEBUG] [2016-06-29 21:05:02] [NetworkClient:handleConnections:476] Completed connection to node 2147483647
+[DEBUG] [2016-06-29 21:05:04] [MyKafkaProducer:run:116] Producer: msg=[MessageTo_Broker_消息MSG_2] is sent.
+[INFO ] [2016-06-29 21:05:04] [MyKafkaProducer:run:121] Producer: sleep 2s...
+[DEBUG] [2016-06-29 21:05:06] [MyKafkaProducer:run:116] Producer: msg=[MessageTo_Broker_消息MSG_3] is sent.
+[INFO ] [2016-06-29 21:05:06] [MyKafkaProducer:run:121] Producer: sleep 2s...
+[DEBUG] [2016-06-29 21:05:08] [MyKafkaProducer:run:116] Producer: msg=[MessageTo_Broker_消息MSG_4] is sent.
+[INFO ] [2016-06-29 21:05:08] [MyKafkaProducer:run:121] Producer: sleep 2s...
+[DEBUG] [2016-06-29 21:05:10] [MyKafkaProducer:run:116] Producer: msg=[MessageTo_Broker_消息MSG_5] is sent.
+[INFO ] [2016-06-29 21:05:10] [MyKafkaProducer:run:121] Producer: sleep 2s...
+[DEBUG] [2016-06-29 21:05:11] [AbstractCoordinator$JoinGroupResponseHandler:handle:351] Received successful join group response for group testgroup1: {error_code=0,generation_id=2,group_protocol=range,leader_id=consumer-1-cb425f61-dff5-49ff-9be9-b8d2f4ee9a04,member_id=consumer-1-cb425f61-dff5-49ff-9be9-b8d2f4ee9a04,members=[{member_id=consumer-1-cb425f61-dff5-49ff-9be9-b8d2f4ee9a04,member_metadata=java.nio.HeapByteBuffer[pos=0 lim=46 cap=46]}]}
+[DEBUG] [2016-06-29 21:05:11] [ConsumerCoordinator:performAssignment:257] Performing assignment for group testgroup1 using strategy range with subscriptions {consumer-1-cb425f61-dff5-49ff-9be9-b8d2f4ee9a04=Subscription(topics=[testtopic2, testtopic1, testtopic3])}
+[DEBUG] [2016-06-29 21:05:11] [ConsumerCoordinator:performAssignment:262] Finished assignment for group testgroup1: {consumer-1-cb425f61-dff5-49ff-9be9-b8d2f4ee9a04=Assignment(partitions=[testtopic2-0, testtopic1-0, testtopic3-0])}
+[DEBUG] [2016-06-29 21:05:11] [AbstractCoordinator:onJoinLeader:408] Sending leader SyncGroup for group testgroup1 to coordinator 192.168.100.103:9092 (id: 2147483647 rack: null): {group_id=testgroup1,generation_id=2,member_id=consumer-1-cb425f61-dff5-49ff-9be9-b8d2f4ee9a04,group_assignment=[{member_id=consumer-1-cb425f61-dff5-49ff-9be9-b8d2f4ee9a04,member_assignment=java.nio.HeapByteBuffer[pos=0 lim=70 cap=70]}]}
+[INFO ] [2016-06-29 21:05:12] [AbstractCoordinator$SyncGroupResponseHandler:handle:434] Successfully joined group testgroup1 with generation 2
+[INFO ] [2016-06-29 21:05:12] [ConsumerCoordinator:onJoinComplete:219] Setting newly assigned partitions [testtopic1-0, testtopic3-0, testtopic2-0] for group testgroup1
+[DEBUG] [2016-06-29 21:05:12] [ConsumerCoordinator:sendOffsetFetchRequest:612] Group testgroup1 fetching committed offsets for partitions: [testtopic1-0, testtopic3-0, testtopic2-0]
+[DEBUG] [2016-06-29 21:05:12] [Fetcher:updateFetchPositions:173] Resetting offset for partition testtopic1-0 to the committed offset 59
+[DEBUG] [2016-06-29 21:05:12] [Fetcher:updateFetchPositions:173] Resetting offset for partition testtopic3-0 to the committed offset 0
+[DEBUG] [2016-06-29 21:05:12] [Fetcher:updateFetchPositions:173] Resetting offset for partition testtopic2-0 to the committed offset 0
+[DEBUG] [2016-06-29 21:05:12] [NetworkClient:initiateConnect:496] Initiating connection to node 0 at 192.168.100.103:9092.
+[DEBUG] [2016-06-29 21:05:12] [Metrics:sensor:296] Added sensor with name node-0.bytes-sent
+[DEBUG] [2016-06-29 21:05:12] [Metrics:sensor:296] Added sensor with name node-0.bytes-received
+[DEBUG] [2016-06-29 21:05:12] [Metrics:sensor:296] Added sensor with name node-0.latency
+[DEBUG] [2016-06-29 21:05:12] [NetworkClient:handleConnections:476] Completed connection to node 0
+[INFO ] [2016-06-29 21:05:12] [MyKafkaConsumer:run:118] Consumer: sleep 5s...
+[DEBUG] [2016-06-29 21:05:12] [MyKafkaProducer:run:116] Producer: msg=[MessageTo_Broker_消息MSG_6] is sent.
+[INFO ] [2016-06-29 21:05:12] [MyKafkaProducer:run:121] Producer: sleep 2s...
+[DEBUG] [2016-06-29 21:05:14] [MyKafkaProducer:run:116] Producer: msg=[MessageTo_Broker_消息MSG_7] is sent.
+[INFO ] [2016-06-29 21:05:14] [MyKafkaProducer:run:121] Producer: sleep 2s...
+[DEBUG] [2016-06-29 21:05:16] [MyKafkaProducer:run:116] Producer: msg=[MessageTo_Broker_消息MSG_8] is sent.
+[INFO ] [2016-06-29 21:05:16] [MyKafkaProducer:run:121] Producer: sleep 2s...
+[DEBUG] [2016-06-29 21:05:17] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 59 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:05:17] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:05:17] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:05:17] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 59 for partition testtopic1-0
+[DEBUG] [2016-06-29 21:05:17] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic3-0
+[DEBUG] [2016-06-29 21:05:17] [ConsumerCoordinator$OffsetCommitResponseHandler:handle:544] Group testgroup1 committed offset 0 for partition testtopic2-0
+[DEBUG] [2016-06-29 21:05:17] [AbstractCoordinator$HeartbeatCompletionHandler:handle:629] Received successful heartbeat response for group testgroup1
+[DEBUG] [2016-06-29 21:05:17] [Metrics:sensor:296] Added sensor with name topic.testtopic1.bytes-fetched
+[DEBUG] [2016-06-29 21:05:17] [Metrics:sensor:296] Added sensor with name topic.testtopic1.records-fetched
+[DEBUG] [2016-06-29 21:05:17] [Metrics:sensor:296] Added sensor with name topic.testtopic3.bytes-fetched
+[DEBUG] [2016-06-29 21:05:17] [Metrics:sensor:296] Added sensor with name topic.testtopic3.records-fetched
+[DEBUG] [2016-06-29 21:05:17] [Metrics:sensor:296] Added sensor with name topic.testtopic2.bytes-fetched
+[DEBUG] [2016-06-29 21:05:17] [Metrics:sensor:296] Added sensor with name topic.testtopic2.records-fetched
+[INFO ] [2016-06-29 21:05:17] [MyKafkaConsumer:run:114] Consumer: got msg, offset=[59],key=[null],val=[MessageTo_Broker_消息MSG_22]
+
+[INFO ] [2016-06-29 21:05:17] [MyKafkaConsumer:run:114] Consumer: got msg, offset=[60],key=[null],val=[MessageTo_Broker_消息MSG_1]
+
+[INFO ] [2016-06-29 21:05:17] [MyKafkaConsumer:run:114] Consumer: got msg, offset=[61],key=[null],val=[MessageTo_Broker_消息MSG_2]
+
+[INFO ] [2016-06-29 21:05:17] [MyKafkaConsumer:run:114] Consumer: got msg, offset=[62],key=[null],val=[MessageTo_Broker_消息MSG_3]
+
+[INFO ] [2016-06-29 21:05:17] [MyKafkaConsumer:run:114] Consumer: got msg, offset=[63],key=[null],val=[MessageTo_Broker_消息MSG_4]
+
+[INFO ] [2016-06-29 21:05:17] [MyKafkaConsumer:run:114] Consumer: got msg, offset=[64],key=[null],val=[MessageTo_Broker_消息MSG_5]
+
+[INFO ] [2016-06-29 21:05:17] [MyKafkaConsumer:run:114] Consumer: got msg, offset=[65],key=[null],val=[MessageTo_Broker_消息MSG_6]
+
+[INFO ] [2016-06-29 21:05:17] [MyKafkaConsumer:run:114] Consumer: got msg, offset=[66],key=[null],val=[MessageTo_Broker_消息MSG_7]
+
+[INFO ] [2016-06-29 21:05:17] [MyKafkaConsumer:run:114] Consumer: got msg, offset=[67],key=[null],val=[MessageTo_Broker_消息MSG_8]
+
+[INFO ] [2016-06-29 21:05:17] [MyKafkaConsumer:run:118] Consumer: sleep 5s...
+[DEBUG] [2016-06-29 21:05:18] [MyKafkaProducer:run:116] Producer: msg=[MessageTo_Broker_消息MSG_9] is sent.
+[INFO ] [2016-06-29 21:05:18] [MyKafkaProducer:run:121] Producer: sleep 2s...
+[INFO ] [2016-06-29 21:05:20] [MyKafkaDemo:ExitHandle:124] MyKafkaDemo:准备执行退出前的操作！
+[INFO ] [2016-06-29 21:05:20] [MyKafkaDemo:ExitHandle:128] MyKafkaDemo:Try to stop producer, wait 2s...
+[INFO ] [2016-06-29 21:05:20] [MyKafkaProducer:ExitHandle:148] Producer:Try to stop producer, wait 2s...
+[INFO ] [2016-06-29 21:05:22] [MyKafkaDemo:ExitHandle:132] MyKafkaDemo:Try to stop consumer, wait 2s...
+[DEBUG] [2016-06-29 21:05:22] [MyKafkaConsumer:ExitHandle:154] consumer:Try to stop consumer, wait 2s...
+[INFO ] [2016-06-29 21:05:24] [MyKafkaDemo:ExitHandle:137] MyKafkaDemo:Try to stop kafka, wait 10s...
+[INFO ] [2016-06-29 21:05:34] [MyKafkaDemo:ExitHandle:141] MyKafkaDemo:Try to stop zookeeper, wait 10s...
+[INFO ] [2016-06-29 21:05:44] [MyKafkaDemo:ExitHandle:147] MyKafkaDemo:退出前的操作退出完成！
