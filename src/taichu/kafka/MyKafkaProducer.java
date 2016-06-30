@@ -21,7 +21,7 @@ import taichu.kafka.test.ExitHandling;
  * @Title: MyKafkaProducer.java 
  * @Package taichu.kafka
  * Description: 
- * Version: 1.0 
+ * Version: 0.0.1 
 ******************************************************************************/
 
 /**

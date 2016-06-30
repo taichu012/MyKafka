@@ -8,3 +8,5 @@
 /consumer.log
 /MyKafkaDemo.log
 /Producer.log
+/.classpath
+/.project

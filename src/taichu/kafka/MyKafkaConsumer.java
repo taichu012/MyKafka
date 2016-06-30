@@ -65,10 +65,6 @@ public class MyKafkaConsumer  implements Runnable, ExitHandling {
 
 		try {
 			consumer = new KafkaConsumer<String, String>(props);
-			// consumer =
-			// kafka.consumer.Consumer.createJavaConsumerConnector(createConsumerConfig());
-			// //old way
-
 		} catch (Exception e) {
 			log.error("Got exception: " + e.toString());
 			//System.out.println("Got exception: " + e.toString());

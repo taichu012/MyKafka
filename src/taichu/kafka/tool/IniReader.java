@@ -16,9 +16,9 @@ import java.util.Properties;
 public class IniReader {
 
 	protected HashMap<String, Properties> sections = new HashMap<String, Properties>();
-	// transient表示此字段不参加对象的序列化，可能是以为它是中间值！
-	private transient String currentSecion;
-	private transient Properties current;
+	//transient表示此字段不参加对象的序列化，这里不用加的原因是此class不是实体类或数据类，而是无需实例化的功能类
+	private String currentSecion;
+	private Properties current;
 	private BufferedReader reader = null;
 
 	public IniReader(String iniFilename) {
@@ -48,18 +48,12 @@ public class IniReader {
 	protected void parseLine(String line) {
 		line = line.trim();
 		if (line.matches("\\[.*\\]")) {
-			// 如果是 JDK 1.4(不含1.4)以下版本，修改为
-			// if (line.startsWith("[") && line.endsWith("]")) {
 			if (current != null) {
 				sections.put(currentSecion, current);
 			}
 			currentSecion = line.replaceFirst("\\[(.*)\\]", "$1");
-			// JDK 低于 1.4 时
-			// currentSection = line.substring(1， line.length() - 1);
 			current = new Properties();
 		} else if (line.matches(".*=.*")) {
-			// JDK 低于 1.4 时
-			// } else if (line.indexOf(’=’) >= 0) {
 			int i = line.indexOf('=');
 			String name = line.substring(0, i);
 			String value = line.substring(i + 1);
@@ -81,7 +75,6 @@ public class IniReader {
 		IniReader reader = new IniReader(IniFilename);
 		System.out.println(reader.getValue("StartServer", "cmd.start.zookeepter"));
 		System.out.println(reader.getValue("StartServer", "cmd.start.kafka"));
-		// System.out.println(reader.getValue("section1","key1"));
 
 		// get zookeeper server parameters
 		String value = reader.getValue("StartServer", "cmd.start.zookeepter");
@@ -93,6 +86,7 @@ public class IniReader {
 		String IniFilename2 = "D:\\thisfileisnotexisted.ini";
 		IniReader reader2 = new IniReader(IniFilename2);
 		value = reader2.getValue("sec", "key");
+		//用断言来测试
 		assert (value == null);
 		System.out.println("value should be null. value=" + value);
 

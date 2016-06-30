@@ -22,6 +22,9 @@ REQ0011：综合前面开发内容，实现了MyKafkaDemo启动2个进程和2个
 这样会级联的关闭cmd启动的java子进程！如果发现java子进程上未关闭，可在任务管理器中关闭它们（jconsole中可以看到java进程号）
 REQ0012：增加了对log4j的支持，输出多个log文件到根目录
 BUG0013:修复了inireader多个调用者用不同inifilename调用的冲突问题；
+REQ0014：实现对github的源码推送，实现一个本地项目修改并推送到2个远端的git仓库（纯eclipse配置）
+https://github.com/taichu012/MyKafka.git
+https://git.oschina.net/taichu/MyKafka.git
 
 
 
@@ -37,11 +40,11 @@ TODOLIST:
 2.【CLOSED】setup log4j(console output and log file output) 
 3.【CLOSED】setup command line start mode (as producer ONLY,consumer ONLY, both,...) 
 4.【CLOSED】放入GITHUB或oschina的开源地方
-5.增加对maven的支持
-6.setup socket data input to producer; 
-7.测试jmeter发送message给producer来测试
-8.setup http/URL data input to producer(use tomcat?)
-9.setup Control Protocol to handle producer & consumer; 
+5.增加对maven/NEXUS的支持
+6.计划实现对socket/TCP（UDP看情况）端口的多线程支持，接受数据到producer并存入kafka，使用concurrent线程和Executors类; 
+7.用jmeter来发送message给producer，做压力测试
+8.实现URL接口（非传统socket/TCP/UDP接口）接受数据给producer存入kafka(开发tomcat的webapp吗?或其他形式)
+9.开发高层次的作业协议，协调consumer和producer的消息收发，基于kafka，高于kafka; 
 10.尝试用生物调控因子来动态的处理producer和consumer的数量（是否需要用到pool开源库？）
 
 
