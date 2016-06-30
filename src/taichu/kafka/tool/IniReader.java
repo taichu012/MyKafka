@@ -11,37 +11,21 @@ import java.util.HashMap;
 import java.util.Properties;
 
 /**
- * @author James Fancy
+ * @author taichu
  */
 public class IniReader {
 
 	protected HashMap<String, Properties> sections = new HashMap<String, Properties>();
 	// transient表示此字段不参加对象的序列化，可能是以为它是中间值！
-	private static volatile String IniFilename = "";
 	private transient String currentSecion;
 	private transient Properties current;
 	private BufferedReader reader = null;
-	private static volatile IniReader instance = null;
-
-	public synchronized static IniReader getInstance(String iniFilename) {
-		if (instance == null) {
-			instance = new IniReader(iniFilename);
-		} else if (!iniFilename.equals(IniFilename)) {
-			instance = new IniReader(iniFilename);
-		}
-		return instance;
-	}
-
-	public String GetValue(String section, String key) {
-		return getValue(section, key);
-	}
 
 	public IniReader(String iniFilename) {
 		try {
 			reader = new BufferedReader(new FileReader(iniFilename));
 			read(reader);
 			reader.close();
-			setInifilename(iniFilename);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			System.out.println("Doesn't find Ini file(" + iniFilename + ")!");
@@ -52,10 +36,6 @@ public class IniReader {
 			reader = null;
 		}
 
-	}
-	
-	private synchronized void setInifilename(String iniFilename){
-		IniFilename = iniFilename;
 	}
 
 	protected void read(BufferedReader reader) throws IOException {
@@ -87,7 +67,7 @@ public class IniReader {
 		}
 	}
 
-	protected String getValue(String section, String name) {
+	public String getValue(String section, String name) {
 		Properties p = (Properties) sections.get(section);
 		if (p == null) {
 			return null;
@@ -103,13 +83,18 @@ public class IniReader {
 		System.out.println(reader.getValue("StartServer", "cmd.start.kafka"));
 		// System.out.println(reader.getValue("section1","key1"));
 
-		// start zookeeper server
-		String value = IniReader.getInstance(IniFilename).GetValue("StartServer", "cmd.start.zookeepter");
+		// get zookeeper server parameters
+		String value = reader.getValue("StartServer", "cmd.start.zookeepter");
 		System.out.println(value);
-		value = IniReader.getInstance(IniFilename).GetValue("StartServer", "cmd.start.kafka");
+		// get kafka server parameters
+		value = reader.getValue("StartServer", "cmd.start.kafka");
 		System.out.println(value);
-		value = IniReader.getInstance("Not a real filename").GetValue("sec", "key");
-		System.out.println(value);
+		// test get value from a not existed ini file.
+		String IniFilename2 = "D:\\thisfileisnotexisted.ini";
+		IniReader reader2 = new IniReader(IniFilename2);
+		value = reader2.getValue("sec", "key");
+		assert (value == null);
+		System.out.println("value should be null. value=" + value);
 
 	}
 

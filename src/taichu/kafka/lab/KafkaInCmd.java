@@ -25,8 +25,8 @@ public class KafkaInCmd extends ServerInCmd {
 	 */
 	public static void main(String[] args) {
 		
-		IniReader inird = IniReader.getInstance(INI_FILENAME);
-		String cmdStartKafka = inird.GetValue("StartServer","cmd.start.kafka");
+		IniReader inireader = new IniReader(INI_FILENAME);
+		String cmdStartKafka = inireader.getValue("StartServer","cmd.start.kafka");
 		
 		ZookeeperInCmd kfkcmd = new ZookeeperInCmd(cmdStartKafka);
 		Thread p = new Thread(kfkcmd);

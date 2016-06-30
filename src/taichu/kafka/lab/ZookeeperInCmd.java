@@ -25,8 +25,8 @@ public class ZookeeperInCmd extends ServerInCmd {
 	 */
 	public static void main(String[] args) {
 		
-		IniReader inird = IniReader.getInstance(INI_FILENAME);
-		String cmdStartZk = inird.GetValue("StartServer","cmd.start.zookeepter");
+		IniReader inireader = new IniReader(INI_FILENAME);
+		String cmdStartZk = inireader.getValue("StartServer","cmd.start.zookeepter");
 		
 		ZookeeperInCmd zkpcmd = new ZookeeperInCmd(cmdStartZk);
 		Thread p = new Thread(zkpcmd);

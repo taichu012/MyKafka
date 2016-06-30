@@ -42,10 +42,10 @@ class MyKafkaDemo implements ExitHandling {
 		//   并确保子java进程也结束（可以通过jconsole来看java进程是否存在）
 		// 7 一般来说zookeeper和kafka的独立cmd进程结束，子进程java结束，则端口2181和9092不会被占用，
 		//   但也可用netstat -ano|findstr 2181来查看，如果还有端口占用，则通过jconsole查出java进程号，手动给杀死！
-		IniReader inird = IniReader.getInstance(INI_FILENAME);
+		IniReader inireader = new IniReader(INI_FILENAME);
 
 		// start zookeeper server
-		String cmdStartZk = inird.GetValue("StartServer", "cmd.start.zookeepter");
+		String cmdStartZk = inireader.getValue("StartServer", "cmd.start.zookeepter");
 		try {
 			zkp = Runtime.getRuntime().exec(cmdStartZk);
 			log.info("Start zookeeper...wait 10s...!");
@@ -67,7 +67,7 @@ class MyKafkaDemo implements ExitHandling {
 		}
 
 		// start kafka server
-		String cmdStartKafka = inird.GetValue("StartServer", "cmd.start.kafka");
+		String cmdStartKafka = inireader.getValue("StartServer", "cmd.start.kafka");
 		try {
 			kfk = Runtime.getRuntime().exec(cmdStartKafka);
 			log.info("Start kafka...wait 30s...!");
