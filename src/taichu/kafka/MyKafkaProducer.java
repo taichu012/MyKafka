@@ -13,7 +13,7 @@ import java.util.Properties;
 import org.apache.kafka.clients.producer.*;
 import org.apache.log4j.*;
 
-import taichu.kafka.test.ExitHandling;
+import taichu.kafka.test.Itf.ExitHandling;
 
 /******************************************************************************* 
  * MyKafkaProducer.java Created on 2016-06-25 

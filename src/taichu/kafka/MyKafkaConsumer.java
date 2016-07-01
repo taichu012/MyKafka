@@ -8,7 +8,7 @@ import java.util.Properties;
 import org.apache.kafka.clients.consumer.*;
 import org.apache.log4j.*;
 
-import taichu.kafka.test.ExitHandling;
+import taichu.kafka.test.Itf.ExitHandling;
 
 /**
  * @author taichu

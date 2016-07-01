@@ -3,6 +3,8 @@
  */
 package taichu.kafka.test;
 
+import taichu.kafka.test.Itf.ExitHandling;
+
 /**
  * @author taichu
  *

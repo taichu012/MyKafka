@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 
 import taichu.kafka.MyKafkaConsumer;
 import taichu.kafka.MyKafkaProducer;
+import taichu.kafka.test.Itf.ExitHandling;
 import taichu.kafka.tool.IniReader;
 
 /**

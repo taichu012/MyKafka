@@ -41,7 +41,8 @@ TODOLIST:
 3.【CLOSED】setup command line start mode (as producer ONLY,consumer ONLY, both,...) 
 4.【CLOSED】放入GITHUB或oschina的开源地方
 5.增加对maven/NEXUS的支持
-6.计划实现对socket/TCP（UDP看情况）端口的多线程支持，接受数据到producer并存入kafka，使用concurrent线程和Executors类; 
+6.【GOING】计划实现对socket/TCP（UDP看情况）端口的多线程支持，接受数据到producer并存入kafka，使用concurrent线程和Executors类;
+http://www.cnblogs.com/fbsk/archive/2012/02/03/2336689.html 
 7.用jmeter来发送message给producer，做压力测试
 8.实现URL接口（非传统socket/TCP/UDP接口）接受数据给producer存入kafka(开发tomcat的webapp吗?或其他形式)
 9.开发高层次的作业协议，协调consumer和producer的消息收发，基于kafka，高于kafka; 

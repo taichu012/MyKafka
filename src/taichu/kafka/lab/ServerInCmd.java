@@ -12,7 +12,7 @@ import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
 import kafka.security.auth.Write;
-import taichu.kafka.test.ExitHandling;
+import taichu.kafka.test.Itf.ExitHandling;
 import taichu.kafka.tool.F;
 import taichu.kafka.tool.IniReader;
 
