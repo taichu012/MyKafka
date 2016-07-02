@@ -1,22 +1,19 @@
 /**
  * 
  */
-package taichu.kafka.test;
+package taichu.kafka.test.KafkaTest;
 
 import java.io.IOException;
 
 import org.apache.log4j.Logger;
 
-import taichu.kafka.MyKafkaConsumer;
-import taichu.kafka.MyKafkaProducer;
-import taichu.kafka.test.Itf.ExitHandling;
 import taichu.kafka.tool.IniReader;
 
 /**
  * @author taichu
  *
  */
-class MyKafkaDemo implements ExitHandling {
+class MyKafkaDemo implements IExitHandling {
 	private static Logger log = Logger.getLogger("MyKafkaDemo.class");
 	public static MyKafkaProducer pdr = null;
 	public static MyKafkaConsumer csr = null;

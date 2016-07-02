@@ -23,8 +23,8 @@ public class VehicleTrafficDataWrapperOfProvider1 implements IDataTransform2Kafk
 	 */
 	@Override
 	public String ToKafkaMsg(String msg) {
-		// TODO Auto-generated method stub
-		return null;
+		//return without changed for testing
+		return msg;
 	}
 
 }

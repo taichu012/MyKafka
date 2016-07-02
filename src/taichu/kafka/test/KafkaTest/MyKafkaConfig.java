@@ -1,7 +1,7 @@
 /**
  * 
  */
-package taichu.kafka;
+package taichu.kafka.test.KafkaTest;
 
 /**
  * @author taihcu

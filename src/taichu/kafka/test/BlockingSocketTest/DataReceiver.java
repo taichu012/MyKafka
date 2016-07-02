@@ -1,18 +1,14 @@
 /**
  * 
  */
-package taichu.kafka.Input2Kafka.common;
+package taichu.kafka.test.BlockingSocketTest;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.net.SocketTimeoutException;
-
 import org.apache.log4j.Logger;
-
-import taichu.kafka.tool.F;
 
 /**
  * 功能说明：执行具体业务的线程
@@ -26,13 +22,6 @@ public class DataReceiver implements Runnable {
 	private BufferedReader is;
 	private PrintWriter os;
 
-	// interface for kafka producer
-	// TODO:怎么初始化？ 用sprint？还是manager class？
-	private IKafkaProducer kfkp = null;
-	// interface for msg transform of Vehicle traffic information
-	// TODO:怎么初始化？ 用sprint？还是manager class？
-	private IDataTransform2KafkaMsg dt2km = null;
-	
 	private String getTheadName(){
 		return Thread.currentThread().getName();
 	}

@@ -1,13 +1,13 @@
 /**
  * 
  */
-package taichu.kafka.test.Itf;
+package taichu.kafka.test.KafkaTest;
 
 /**
  * @author taichu
  *
  */
-public interface ExitHandling {
+public interface IExitHandling {
 	
 	public void ExitHandle(); 
 

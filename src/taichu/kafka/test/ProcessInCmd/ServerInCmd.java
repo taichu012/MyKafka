@@ -3,7 +3,7 @@
  * 这个class尚未完成，他企图通过线程的控制手段来处理一个cmd独立进程，而cmd独立进程还启动一个java进程。
  * 这样的控制处理链似乎无法处理，所以此基类尚待研究！
  */
-package taichu.kafka.lab;
+package taichu.kafka.test.ProcessInCmd;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -12,7 +12,7 @@ import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
 import kafka.security.auth.Write;
-import taichu.kafka.test.Itf.ExitHandling;
+import taichu.kafka.test.KafkaTest.IExitHandling;
 import taichu.kafka.tool.F;
 import taichu.kafka.tool.IniReader;
 
@@ -20,7 +20,7 @@ import taichu.kafka.tool.IniReader;
  * @author taichu
  *
  */
-public class ServerInCmd implements Runnable, ExitHandling {
+public class ServerInCmd implements Runnable, IExitHandling {
 
 	private String CmdToStartServer = "";
 	private OutputStreamWriter w = null;
@@ -109,7 +109,7 @@ public class ServerInCmd implements Runnable, ExitHandling {
 		} finally {
 			if (p != null) {
 				p.destroy();
-				System.out.println("Process [PID=" + F.GetInstance().GetPIDWithDomain() + "] is destoried!");
+				System.out.println("Process [PID=" + F.GetF().GetPIDWithDomain() + "] is destoried!");
 			}
 			System.out.println("If goes here, thread-[" + Thread.currentThread().getName() + "|"
 					+ Thread.currentThread().getId() + "] stopped after his son(process) is finished.");

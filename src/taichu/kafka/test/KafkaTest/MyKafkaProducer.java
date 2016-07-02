@@ -1,7 +1,7 @@
 /**
  * 
  */
-package taichu.kafka;
+package taichu.kafka.test.KafkaTest;
 
 import java.util.Properties;
 
@@ -12,8 +12,6 @@ import java.util.Properties;
 
 import org.apache.kafka.clients.producer.*;
 import org.apache.log4j.*;
-
-import taichu.kafka.test.Itf.ExitHandling;
 
 /******************************************************************************* 
  * MyKafkaProducer.java Created on 2016-06-25 
@@ -28,7 +26,7 @@ import taichu.kafka.test.Itf.ExitHandling;
  * @author taichu
  *
  */
-public class MyKafkaProducer implements Runnable, ExitHandling {
+public class MyKafkaProducer implements Runnable, IExitHandling {
 
 	private static Logger log = Logger.getLogger("MyKafkaProducer.class");
 	private static volatile MyKafkaProducer instance = null;

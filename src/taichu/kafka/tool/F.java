@@ -19,7 +19,7 @@ public class F {
 	public F() {
 	}
 
-	public static F GetInstance() {
+	public static F GetF() {
 		if (instance == null) {
 			instance = new F();
 		}
@@ -45,6 +45,11 @@ public class F {
 		//System.out.println(name);    
 		// get pid@DOMAIN  
 		return  name;  
+	}
+	
+	
+	public String GetThreadName(Thread t){
+		return t.currentThread().getName();
 	}
 
 

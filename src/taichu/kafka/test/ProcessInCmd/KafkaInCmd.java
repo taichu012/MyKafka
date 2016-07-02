@@ -1,7 +1,7 @@
 /**
  * 
  */
-package taichu.kafka.lab;
+package taichu.kafka.test.ProcessInCmd;
 
 import taichu.kafka.tool.IniReader;
 

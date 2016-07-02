@@ -1,7 +1,7 @@
 /**
  * 
  */
-package taichu.kafka.Input2Kafka.common;
+package taichu.kafka.test.BlockingSocketTest;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -17,7 +17,7 @@ import org.apache.log4j.Logger;
  * @author Administrator
  *
  */
-public class SocketTCPServer implements IAudit, IStart, IShutdown, IRegulate {
+public class SocketTCPServer {
 
 	private static Logger log = Logger.getLogger("SocketTCPServer.class");
 

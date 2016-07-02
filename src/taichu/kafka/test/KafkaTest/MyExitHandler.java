@@ -1,9 +1,7 @@
 /**
  * 
  */
-package taichu.kafka.test;
-
-import taichu.kafka.test.Itf.ExitHandling;
+package taichu.kafka.test.KafkaTest;
 
 /**
  * @author taichu
@@ -11,12 +9,12 @@ import taichu.kafka.test.Itf.ExitHandling;
  */
 public class MyExitHandler implements Runnable {
 	
-	private ExitHandling eh=null;
+	private IExitHandling eh=null;
 
 	/**
 	 * 
 	 */
-	public MyExitHandler(ExitHandling ehdr) {
+	public MyExitHandler(IExitHandling ehdr) {
 		eh=ehdr;
 	}
 

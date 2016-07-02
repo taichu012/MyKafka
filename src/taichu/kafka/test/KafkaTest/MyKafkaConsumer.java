@@ -1,20 +1,18 @@
 /**
  * 
  */
-package taichu.kafka;
+package taichu.kafka.test.KafkaTest;
 
 import java.util.Arrays;
 import java.util.Properties;
 import org.apache.kafka.clients.consumer.*;
 import org.apache.log4j.*;
 
-import taichu.kafka.test.Itf.ExitHandling;
-
 /**
  * @author taichu
  *
  */
-public class MyKafkaConsumer  implements Runnable, ExitHandling {
+public class MyKafkaConsumer  implements Runnable, IExitHandling {
 	
 	private static Logger log = Logger.getLogger("MyKafkaConsumer.class");
 	private static volatile MyKafkaConsumer instance = null;
