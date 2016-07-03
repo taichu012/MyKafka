@@ -51,7 +51,16 @@ public class DiscardServerHandler extends SimpleChannelInboundHandler<Object> {
 		ByteBuf in = (ByteBuf) msg;
 		try {
 			while (in.isReadable()) { // (1)
-				System.out.print((char) in.readByte());
+				System.out.println((char) in.readByte());
+				//TODO:你这里可以用print不换行，我换行是为了看到底收到的是几个字符；
+				//测试发现，telnet客户端每次按下英文字母就以字节发到server被netty处理；
+				//如果telnet客户都打的是中文比如”中国“，则在client端会一下子发过来4个字节（GBK是2字节1个字符）
+				//所以你看到了server这里应对”中国“的是4行输出；
+				//！！！我们要做的就是将一次读取完毕后的bytes都整合为byte[]字节数组，然后转码为utf-8或gbk输出到console
+				//这样就看得到中文了。
+//				byte[] bytes= in.readByte();
+//				System.out.print(new String((byte[])in.readByte(),"utf-8"));
+//				String s  =new String(s.getBytes("gbk"),"utf-8");
 				System.out.flush();
 				// TODO:同样也有jmeter或telnet不关闭导致的read阻塞一直等着，需要协商END标记
 			}
