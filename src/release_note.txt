@@ -48,7 +48,9 @@ http://www.cnblogs.com/fbsk/archive/2012/02/03/2336689.html
 9.开发高层次的作业协议，协调consumer和producer的消息收发，基于kafka，高于kafka; 
 10.尝试用生物调控因子来动态的处理producer和consumer的数量（是否需要用到pool开源库？）
 11.【CLOSED】JAVADOC/API文档嵌入：eclipse中菜单Window到Perferences到java项到installed JRE，选中rt.jar包，单击右边Javadoc Location；
-12.netty框架比mina新和好，用起来！用netty异步NIO框架+executor的线程池（也许netty自己有线程池！）
+12.【GOING】netty框架比mina新和好，用起来！用netty异步NIO框架+executor的线程池（也许netty自己有线程池！）
+   netty怎么插入自己的编辑吗codec handler
+   netty怎么控制client没有妥善关闭socket，没有结束符号的超时处理？
 13.看是否借鉴以前的unioss？
 14.【CLOSED】jdk的class带着源码，可以直接查看
 
@@ -90,7 +92,9 @@ H0003 关于网络IO堵塞
 	//但是因为阻塞网络IO没有协商结束标记，所以只要TCP socket开着，而网络无字节/字符流量，就一直在read阻塞
 	//所以必须协商结束符比如"<EOF>"等作为flag。
 	
-	//对于非阻塞式的NIO，再研究！
+	//对于非阻塞式的NIO，再研究！可以直接上框架netty
+	
+H0004 eclipse的快速格式化format快捷键是ctrl+shift+f，但经常和输入法冲突，当你关闭输入法才可以让这个快捷方式奇效！
 	  
 	  
 	  
