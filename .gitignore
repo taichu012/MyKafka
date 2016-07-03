@@ -3,6 +3,7 @@
 # Package Files #
 *.war
 *.ear
+*.log
 
 /consumer.log
 /MyKafkaDemo.log
@@ -10,3 +11,5 @@
 /.classpath
 /.project
 /bin/
+/Consumer.log
+/MyKafkaDemo.log.2016-07-02

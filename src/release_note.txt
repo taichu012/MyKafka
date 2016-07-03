@@ -36,28 +36,32 @@ https://git.oschina.net/taichu/MyKafka.git
 TODOLIST: 
 ++++++++++++++++
 
-1.【CLOSED】implement consumer;
-2.【CLOSED】setup log4j(console output and log file output) 
-3.【CLOSED】setup command line start mode (as producer ONLY,consumer ONLY, both,...) 
-4.【CLOSED】放入GITHUB或oschina的开源地方
-5.增加对maven/NEXUS的支持
-6.【GOING】计划实现对socket/TCP（UDP看情况）端口的多线程支持，接受数据到producer并存入kafka，使用concurrent线程和Executors类;
-http://www.cnblogs.com/fbsk/archive/2012/02/03/2336689.html 
-7.用jmeter来发送message给producer，做压力测试
-8.实现URL接口（非传统socket/TCP/UDP接口）接受数据给producer存入kafka(开发tomcat的webapp吗?或其他形式)
-9.开发高层次的作业协议，协调consumer和producer的消息收发，基于kafka，高于kafka; 
-10.尝试用生物调控因子来动态的处理producer和consumer的数量（是否需要用到pool开源库？）
-11.【CLOSED】JAVADOC/API文档嵌入：eclipse中菜单Window到Perferences到java项到installed JRE，选中rt.jar包，单击右边Javadoc Location；
-12.【GOING】netty框架比mina新和好，用起来！用netty异步NIO框架+executor的线程池（也许netty自己有线程池！）
+1.【CLOSED】开发：implement consumer;
+2.【CLOSED】开发：setup log4j(console output and log file output) 
+3.【CLOSED】开发：setup command line start mode (as producer ONLY,consumer ONLY, both,...) 
+4.【CLOSED】源码：放入GITHUB或oschina的开源地方
+5.【OPEN】IDE：增加对maven/NEXUS的支持，增加pom.xml并增加版本号到配置；
+6.【GOING】开发：计划实现对socket/TCP（UDP看情况）端口的多线程支持，接受数据到producer并存入kafka，使用concurrent线程和Executors类;
+			http://www.cnblogs.com/fbsk/archive/2012/02/03/2336689.html 
+7.【CLOSED】测试：用jmeter来发送message给producer，做压力测试
+8.【OPEN】开发：实现URL接口（非传统socket/TCP/UDP接口）接受数据给producer存入kafka(开发tomcat的webapp吗?或其他形式)
+9.【OPEN】开发：开发高层次的作业协议，协调consumer和producer的消息收发，监控topic变化，offset变化等；基于kafka，高于kafka; 
+10.【OPEN】开发：尝试用生物调控因子来动态的处理producer和consumer的数量（是否需要用到pool开源库？）
+11.【CLOSED】IDE：JAVADOC/API文档嵌入：eclipse中菜单Window到Perferences到java项到installed JRE，选中rt.jar包，单击右边Javadoc Location；
+12.【GOING】开发：netty框架比mina新和好，用起来！用netty异步NIO框架+executor的线程池（也许netty自己有线程池！）
 	官网：http://netty.io/wiki/user-guide-for-4.x.html
-	netty入门实例【极好！】（http://www.cnblogs.com/zhuawang/p/3849742.html）
-	netty举例【极好！】（http://lippeng.iteye.com/blog/1907279）
-   netty怎么插入自己的编辑吗codec handler
-   netty怎么控制client没有妥善关闭socket，没有结束符号的超时处理？
-   Netty系列之Netty百万级推送服务设计要点（http://www.cnblogs.com/zhuawang/p/4204366.html）
-   netty异步NIO的udp数据包启动配置DatagramChannel参数（http://blog.163.com/linfenliang@126/blog/static/12785719520121074486487/）
-13.看是否借鉴以前的unioss？
-14.【CLOSED】jdk的class带着源码，可以直接查看
+	[tested]netty入门实例【极好！】（http://www.cnblogs.com/zhuawang/p/3849742.html）
+	[tested]netty举例【2013年，举例非常旧！】（http://lippeng.iteye.com/blog/1907279）
+    netty怎么插入自己的编辑吗codec handler
+    netty怎么控制client没有妥善关闭socket，没有结束符号的超时处理？
+    Netty系列之Netty百万级推送服务设计要点（http://www.cnblogs.com/zhuawang/p/4204366.html）
+    netty异步NIO的udp数据包启动配置DatagramChannel参数（http://blog.163.com/linfenliang@126/blog/static/12785719520121074486487/）
+13.【OPEN】看是否借鉴以前的unioss的一些控制？比如结束，SSL，stringSocket等？
+14.【CLOSED】IDE：jdk的class带着源码，可以直接查看；
+15.【CLOSED】IDE：查看第三方lib库的源码（点击类触发找不到class后，可选择带source的jar包）和javadoc（在build中lib中选择某个点开添加source和javadoc）
+16.【OPEN】开发：kafka应该考虑支持linux（虽然是java屏蔽了大部分os差异，但是一般server运行在linux，换行回车，路径斜杠，等还是要仔细考虑
+17.【OPEN】开发：kafka集群的多台host（多个partition，多个producer，多个consumer等）的实践；
+18.【OPEN】测试：对topic下message的收，发作统计，来核对数目；
 
 
 
